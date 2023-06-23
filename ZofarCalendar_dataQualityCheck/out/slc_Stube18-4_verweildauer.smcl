@@ -1,0 +1,30 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}P:\Zofar\Schulze\esra23_calendar\out\slc_Stube18-4_verweildauer_.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}21 Jun 2023, 11:56:11
+{txt}
+{com}. 
+. *************************************************************************
+. ************************** Auswertungen *********************************
+. tabstat dauer, statistic(mean median min max sd)
+
+{txt}{ralign 12:Variable} {...}
+{c |}      Mean       p50       Min       Max        SD
+{hline 13}{c +}{hline 50}
+{ralign 12:dauer} {...}
+{c |}{...}
+ {res} 2214.939  1769.855         1   41003.3  1851.721
+{txt}{hline 13}{c BT}{hline 50}
+
+{com}. 
+. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}P:\Zofar\Schulze\esra23_calendar\out\slc_Stube18-4_verweildauer_.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}21 Jun 2023, 11:56:11
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

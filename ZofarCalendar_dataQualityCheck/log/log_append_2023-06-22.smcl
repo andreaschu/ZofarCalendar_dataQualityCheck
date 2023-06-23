@@ -1,0 +1,146 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}P:\Zofar\Schulze\esra23_calendar\log\log_append_2023-06-22.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}22 Jun 2023, 21:20:42
+{txt}
+{com}. 
+. *_________________________________________________________________
+. ** Do-File zur Erstellung eines gemeinsamen history-Datensatzes
+. *_________________________________________________________________
+. 
+. *********************************************************************
+. ** merge data sets
+. ** - history data from SLC Studienberechtigte 2018, wave 3b
+. ** - history data from SLC Studienberechtigte 2018, wave 4 
+. ** 
+. *********************************************************************
+. 
+. ************************************************************************
+. *** preparing 2018, wave 3b 
+. import delimited "${c -(}c2018w3b{c )-}history.csv", delimiter(comma) bindquote(strict) clear 
+{res}{txt}(encoding automatically selected: ISO-8859-2)
+{text}(5 vars, 873,902 obs)
+
+{com}. 
+. * generate cohort id 
+. gen cohort= 201803
+{txt}
+{com}. tostring participant_id, gen(part_id)
+{txt}part_id generated as {res:str5}
+
+{com}. 
+. * generate unique participant_id, including cohort identifier
+. cap drop pid
+{txt}
+{com}. gen pid="201803"+part_id
+{txt}
+{com}. drop part_id
+{txt}
+{com}. 
+. save "${c -(}datadir{c )-}history_2018-3b.dta", replace
+{txt}{p 0 4 2}
+file {bf}
+P:\Zofar\Schulze\esra23_calendar\data\history_2018-3b.dta{rm}
+saved
+{p_end}
+
+{com}. 
+. 
+. ************************************************************************
+. *** preparing 2018, wave 4 
+. import delimited "${c -(}c2018w4{c )-}history.csv", delimiter(comma) bindquote(strict) clear 
+{res}{txt}(encoding automatically selected: ISO-8859-1)
+{text}(5 vars, 863,072 obs)
+
+{com}. * generate cohort id 
+. gen cohort= 201804
+{txt}
+{com}. tostring participant_id, gen(part_id)
+{txt}part_id generated as {res:str5}
+
+{com}. 
+. * generate unique participant_id, including cohort identifier
+. cap drop pid
+{txt}
+{com}. gen pid="201804"+part_id
+{txt}
+{com}. drop part_id
+{txt}
+{com}. 
+. save "${c -(}datadir{c )-}history_2018-4.dta", replace
+{txt}{p 0 4 2}
+file {bf}
+P:\Zofar\Schulze\esra23_calendar\data\history_2018-4.dta{rm}
+saved
+{p_end}
+
+{com}. 
+. ************************************************************************
+. *** add wave 3b data
+. append using "${c -(}datadir{c )-}history_2018-3b.dta"
+{txt}{p 0 7 2}
+(variable
+{bf:participant_id} was {bf:int}, now {bf:long} to accommodate using data's values)
+{p_end}
+
+{com}. 
+. 
+. 
+. *____________Tester löschen____________________
+. foreach t of numlist 1/500 {c -(}
+{txt}  2{com}.         quiet: drop if token=="tester`t'" | token=="part`t'"
+{txt}  3{com}. {c )-}
+{txt}
+{com}. 
+. ************************************************************************
+. *** save appended data
+. save "${c -(}datadir{c )-}history_2018w3bw4.dta", replace
+{txt}{p 0 4 2}
+file {bf}
+P:\Zofar\Schulze\esra23_calendar\data\history_2018w3bw4.dta{rm}
+saved
+{p_end}
+
+{com}. 
+. ************************************************************************
+. *** NOTES:
+. * possibly merge instead of append or reshape wide (by cohort)
+. 
+{txt}end of do-file
+
+{com}. // history_2018w3bw4.dta
+. 
+. do "${c -(}dodir{c )-}StuBe18W03W04_pageNumModule.do"
+{txt}
+{com}. ****************************************************************************
+. ** Projekt/ Studie:       Vortrag auf ESRA23
+. **                                              
+. ** Erstelldatum:          2023-06-20
+. ** Bearbeitet von:        Schulze, Andrea
+. ****************************************************************************
+. 
+. version 17
+{txt}
+{com}. 
+. global orig "P:\Zofar\slc\slc_stube18\"
+{txt}
+{com}. global workdir "P:\Zofar\Schulze\esra23_calendar\"
+{txt}
+{com}. 
+. global dodir "${c -(}workdir{c )-}do\"
+{txt}
+{com}. global datadir "${c -(}workdir{c )-}data\"
+{txt}
+{com}. global log "${c -(}workdir{c )-}log\"
+{txt}
+{com}. global out "${c -(}workdir{c )-}out\"
+{txt}
+{com}. 
+. cd "${c -(}workdir{c )-}log"
+{res}P:\Zofar\Schulze\esra23_calendar\log
+{txt}
+{com}. cap log close
+{smcl}
+{com}{sf}{ul off}

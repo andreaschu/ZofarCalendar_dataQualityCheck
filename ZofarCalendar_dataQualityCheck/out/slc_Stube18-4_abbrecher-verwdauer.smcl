@@ -1,0 +1,649 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}P:\Zofar\Schulze\esra23_calendar\out\slc_Stube18-4_abbrecher-verwdauer_.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}21 Jun 2023, 11:49:57
+{txt}
+{com}. 
+. *******************************************************************************
+. ********************* Auswertungen Abbrüche und Verweildauern **********************
+. 
+. *________Anzahl der Abbrecher pro Seite___________
+. // table page, contents(n abbrecher mean dropoutrate n dropoutrate) format(%9.4f)
+. table page, stat(n abbrecher) stat(mean dropoutrate) stat(n dropoutrate) nformat(%9.4f)
+{res}
+{smcl}
+{reset}{...}
+{hline 30}{c -}{c TT}{c -}{c -}{hline 45}{c -}{c -}{c -}{hline 60}{c -}{c -}{c -}{hline 60}
+{space 30} {c |}  {space 40}Number of non-missing values{space 40}   {space 56}Mean
+{space 30} {c |}  Anzahl der Abbrecher pro Seite (mit lastpage)   Abbruchquote (Anz. Abbrecher im Verhältn. zu Seitenbesucher)   Abbruchquote (Anz. Abbrecher im Verhältn. zu Seitenbesucher)
+{hline 30}{c -}{c +}{c -}{c -}{hline 45}{c -}{c -}{c -}{hline 60}{c -}{c -}{c -}{hline 60}
+page{space 26} {c |}  {space 45}   {space 60}   {space 60}
+  aus_00{space 22} {c |}  {space 38}{result:15.0000}   {space 51}{result:1596.0000}   {space 54}{result:0.0094}
+  aus_01{space 22} {c |}  {space 38}{result:11.0000}   {space 51}{result:1581.0000}   {space 54}{result:0.0070}
+  aus_02{space 22} {c |}  {space 39}{result:9.0000}   {space 51}{result:1570.0000}   {space 54}{result:0.0057}
+  backwardsBlock_doca008{space 6} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  backwardsBlock_empa009{space 6} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  backwardsBlock_empa014{space 6} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  backwardsBlock_empa019{space 6} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  backwardsBlock_empa027{space 6} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  backwardsBlock_empa031{space 6} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  backwardsBlock_empa036{space 6} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  backwardsBlock_feda008{space 6} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  backwardsBlock_inta008{space 6} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  backwardsBlock_joba001{space 6} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  backwardsBlock_mpla008{space 6} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  backwardsBlock_otha008{space 6} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  backwardsBlock_sema008{space 6} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  backwardsBlock_sema018{space 6} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  backwardsBlock_stua008{space 6} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  backwardsBlock_stua013{space 6} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  backwardsBlock_stua019{space 6} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  backwardsBlock_stua038{space 6} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  backwardsBlock_uema008{space 6} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  backwardsBlock_voca008{space 6} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  backwardsBlock_voca009{space 6} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  backwardsBlock_voca013{space 6} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  beg_00{space 22} {c |}  {space 37}{result:107.0000}   {space 51}{result:8781.0000}   {space 54}{result:0.0122}
+  beg_01{space 22} {c |}  {space 38}{result:47.0000}   {space 51}{result:8733.0000}   {space 54}{result:0.0054}
+  beg_02{space 22} {c |}  {space 37}{result:218.0000}   {space 51}{result:8692.0000}   {space 54}{result:0.0251}
+  cal_00{space 22} {c |}  {space 38}{result:26.0000}   {space 51}{result:7761.0000}   {space 54}{result:0.0034}
+  calendar{space 20} {c |}  {space 37}{result:327.0000}   {space 51}{result:8236.0000}   {space 54}{result:0.0397}
+  defaultLanding_doc{space 10} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  defaultLanding_emp{space 10} {c |}  {space 39}{result:3.0000}   {space 51}{result:2591.0000}   {space 54}{result:0.0012}
+  defaultLanding_fed{space 10} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  defaultLanding_int{space 10} {c |}  {space 39}{result:1.0000}   {space 51}{result:1924.0000}   {space 54}{result:0.0005}
+  defaultLanding_job{space 10} {c |}  {space 39}{result:2.0000}   {space 51}{result:2606.0000}   {space 54}{result:0.0008}
+  defaultLanding_mpl{space 10} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  defaultLanding_oth{space 10} {c |}  {space 39}{result:1.0000}   {space 51}{result:1581.0000}   {space 54}{result:0.0006}
+  defaultLanding_sem{space 10} {c |}  {space 39}{result:1.0000}   {space 52}{result:567.0000}   {space 54}{result:0.0018}
+  defaultLanding_stu{space 10} {c |}  {space 39}{result:7.0000}   {space 51}{result:6499.0000}   {space 54}{result:0.0011}
+  defaultLanding_uem{space 10} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  defaultLanding_voc{space 10} {c |}  {space 39}{result:3.0000}   {space 51}{result:1782.0000}   {space 54}{result:0.0017}
+  dem_00{space 22} {c |}  {space 39}{result:2.0000}   {space 51}{result:6979.0000}   {space 54}{result:0.0003}
+  dem_07{space 22} {c |}  {space 38}{result:10.0000}   {space 51}{result:6976.0000}   {space 54}{result:0.0014}
+  dem_10{space 22} {c |}  {space 39}{result:1.0000}   {space 51}{result:6977.0000}   {space 54}{result:0.0001}
+  dem_13{space 22} {c |}  {space 39}{result:1.0000}   {space 51}{result:6978.0000}   {space 54}{result:0.0001}
+  dem_15{space 22} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  dem_17{space 22} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  dem_18{space 22} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  dem_19{space 22} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  dem_20{space 22} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  dem_36{space 22} {c |}  {space 39}{result:5.0000}   {space 51}{result:6977.0000}   {space 54}{result:0.0007}
+  dem_37{space 22} {c |}  {space 39}{result:4.0000}   {space 51}{result:5428.0000}   {space 54}{result:0.0007}
+  dem_39{space 22} {c |}  {space 37}{result:159.0000}   {space 51}{result:6974.0000}   {space 54}{result:0.0228}
+  doca008{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  doca011{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  doca016{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  doca022{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  doca026{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  doca027{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  doca029{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  doca030{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  doca032{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  doca035{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  doca037{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  doca039{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  doca042{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  doca044{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  emp_01{space 22} {c |}  {space 39}{result:1.0000}   {space 51}{result:1635.0000}   {space 54}{result:0.0006}
+  emp_02{space 22} {c |}  {space 39}{result:2.0000}   {space 51}{result:1635.0000}   {space 54}{result:0.0012}
+  emp_03{space 22} {c |}  {space 39}{result:4.0000}   {space 51}{result:1633.0000}   {space 54}{result:0.0024}
+  emp_04{space 22} {c |}  {space 39}{result:5.0000}   {space 51}{result:1629.0000}   {space 54}{result:0.0031}
+  emp_09{space 22} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empa009{space 21} {c |}  {space 38}{result:42.0000}   {space 51}{result:4679.0000}   {space 54}{result:0.0090}
+  empa012{space 21} {c |}  {space 39}{result:2.0000}   {space 52}{result:425.0000}   {space 54}{result:0.0047}
+  empa014{space 21} {c |}  {space 39}{result:3.0000}   {space 51}{result:4645.0000}   {space 54}{result:0.0006}
+  empa015{space 21} {c |}  {space 39}{result:9.0000}   {space 51}{result:4637.0000}   {space 54}{result:0.0019}
+  empa016{space 21} {c |}  {space 39}{result:3.0000}   {space 51}{result:4628.0000}   {space 54}{result:0.0006}
+  empa017{space 21} {c |}  {space 39}{result:2.0000}   {space 52}{result:361.0000}   {space 54}{result:0.0055}
+  empa019{space 21} {c |}  {space 38}{result:31.0000}   {space 51}{result:4626.0000}   {space 54}{result:0.0067}
+  empa025{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empa027{space 21} {c |}  {space 39}{result:4.0000}   {space 51}{result:4595.0000}   {space 54}{result:0.0009}
+  empa029{space 21} {c |}  {space 39}{result:1.0000}   {space 52}{result:463.0000}   {space 54}{result:0.0022}
+  empa031{space 21} {c |}  {space 38}{result:11.0000}   {space 51}{result:4592.0000}   {space 54}{result:0.0024}
+  empa034{space 21} {c |}  {space 39}{result:1.0000}   {space 52}{result:191.0000}   {space 54}{result:0.0052}
+  empa036{space 21} {c |}  {space 39}{result:6.0000}   {space 51}{result:4583.0000}   {space 54}{result:0.0013}
+  empa038{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empa042{space 21} {c |}  {space 39}{result:6.0000}   {space 51}{result:4578.0000}   {space 54}{result:0.0013}
+  empa045{space 21} {c |}  {space 39}{result:9.0000}   {space 51}{result:4538.0000}   {space 54}{result:0.0020}
+  empa046{space 21} {c |}  {space 38}{result:18.0000}   {space 51}{result:4529.0000}   {space 54}{result:0.0040}
+  empa048{space 21} {c |}  {space 39}{result:6.0000}   {space 51}{result:4545.0000}   {space 54}{result:0.0013}
+  empa049{space 21} {c |}  {space 38}{result:17.0000}   {space 51}{result:4512.0000}   {space 54}{result:0.0038}
+  empa050{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empa051{space 21} {c |}  {space 38}{result:19.0000}   {space 51}{result:4496.0000}   {space 54}{result:0.0042}
+  empa052{space 21} {c |}  {space 39}{result:3.0000}   {space 52}{result:759.0000}   {space 54}{result:0.0040}
+  empa055{space 21} {c |}  {space 39}{result:3.0000}   {space 51}{result:4445.0000}   {space 54}{result:0.0007}
+  empa056{space 21} {c |}  {space 38}{result:33.0000}   {space 51}{result:4441.0000}   {space 54}{result:0.0074}
+  empa068{space 21} {c |}  {space 39}{result:1.0000}   {space 51}{result:4442.0000}   {space 54}{result:0.0002}
+  empa069{space 21} {c |}  {space 39}{result:1.0000}   {space 51}{result:4472.0000}   {space 54}{result:0.0002}
+  empa070{space 21} {c |}  {space 38}{result:13.0000}   {space 51}{result:4458.0000}   {space 54}{result:0.0029}
+  empa072{space 21} {c |}  {space 39}{result:8.0000}   {space 51}{result:4444.0000}   {space 54}{result:0.0018}
+  empa075{space 21} {c |}  {space 39}{result:4.0000}   {space 51}{result:4449.0000}   {space 54}{result:0.0009}
+  empx001{space 21} {c |}  {space 39}{result:8.0000}   {space 52}{result:746.0000}   {space 54}{result:0.0107}
+  empx002{space 21} {c |}  {space 38}{result:12.0000}   {space 52}{result:366.0000}   {space 54}{result:0.0328}
+  empz009{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empz014{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empz015{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empz019{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empz027{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empz031{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empz036{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empz042{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empz045{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empz046{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empz048{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empz049{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empz050{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empz051{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empz052{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empz055{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empz056{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empz068{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empz069{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empz070{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empz072{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  empz075{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  end{space 25} {c |}  {space 36}{result:6652.0000}   {space 51}{result:6973.0000}   {space 54}{result:0.9540}
+  epi_end{space 21} {c |}  {space 39}{result:8.0000}   {space 51}{result:7238.0000}   {space 54}{result:0.0011}
+  episodeDispatcher{space 11} {c |}  {space 39}{result:1.0000}   {space 51}{result:7920.0000}   {space 54}{result:0.0001}
+  episodeUpdateDispatcher{space 5} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  feda008{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  feda010{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  gsh_00{space 22} {c |}  {space 39}{result:7.0000}   {space 51}{result:7025.0000}   {space 54}{result:0.0010}
+  gsh_01{space 22} {c |}  {space 39}{result:1.0000}   {space 51}{result:7017.0000}   {space 54}{result:0.0001}
+  gsh_02{space 22} {c |}  {space 38}{result:18.0000}   {space 51}{result:7016.0000}   {space 54}{result:0.0026}
+  gsh_03{space 22} {c |}  {space 39}{result:2.0000}   {space 51}{result:6997.0000}   {space 54}{result:0.0003}
+  gsh_04{space 22} {c |}  {space 39}{result:1.0000}   {space 51}{result:6996.0000}   {space 54}{result:0.0001}
+  gsh_05{space 22} {c |}  {space 39}{result:1.0000}   {space 51}{result:6995.0000}   {space 54}{result:0.0001}
+  index{space 23} {c |}  {space 37}{result:396.0000}   {space 51}{result:9085.0000}   {space 54}{result:0.0436}
+  inta008{space 21} {c |}  {space 39}{result:2.0000}   {space 51}{result:1914.0000}   {space 54}{result:0.0010}
+  inta009{space 21} {c |}  {space 39}{result:6.0000}   {space 51}{result:1911.0000}   {space 54}{result:0.0031}
+  inta014{space 21} {c |}  {space 39}{result:1.0000}   {space 51}{result:1906.0000}   {space 54}{result:0.0005}
+  inta015{space 21} {c |}  {space 39}{result:1.0000}   {space 52}{result:161.0000}   {space 54}{result:0.0062}
+  inta016{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  inta020{space 21} {c |}  {space 39}{result:1.0000}   {space 51}{result:1829.0000}   {space 54}{result:0.0005}
+  intx001{space 21} {c |}  {space 39}{result:1.0000}   {space 52}{result:758.0000}   {space 54}{result:0.0013}
+  intx002{space 21} {c |}  {space 39}{result:8.0000}   {space 52}{result:190.0000}   {space 54}{result:0.0421}
+  intz008{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  intz009{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  intz014{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  intz015{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  intz016{space 21} {c |}  {space 39}{result:1.0000}   {space 54}{result:6.0000}   {space 54}{result:0.1667}
+  intz020{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  joba001{space 21} {c |}  {space 39}{result:9.0000}   {space 51}{result:2599.0000}   {space 54}{result:0.0035}
+  manualBackwardsBlock_empx001 {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  manualBackwardsBlock_intx001 {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  manualBackwardsBlock_semx001 {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  manualBackwardsBlock_stux001 {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  manualBackwardsBlock_vocx001 {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  mas_01{space 22} {c |}  {space 39}{result:2.0000}   {space 51}{result:4393.0000}   {space 54}{result:0.0005}
+  mpla008{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  mpla013{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  otha008{space 21} {c |}  {space 39}{result:3.0000}   {space 51}{result:1575.0000}   {space 54}{result:0.0019}
+  otha010{space 21} {c |}  {space 39}{result:2.0000}   {space 51}{result:1077.0000}   {space 54}{result:0.0019}
+  othz008{space 21} {c |}  {space 39}{result:1.0000}   {space 53}{result:54.0000}   {space 54}{result:0.0185}
+  othz010{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  psy_00{space 22} {c |}  {space 38}{result:21.0000}   {space 51}{result:8482.0000}   {space 54}{result:0.0025}
+  psy_01{space 22} {c |}  {space 38}{result:17.0000}   {space 51}{result:8464.0000}   {space 54}{result:0.0020}
+  psy_03{space 22} {c |}  {space 37}{result:126.0000}   {space 51}{result:8446.0000}   {space 54}{result:0.0149}
+  psy_04{space 22} {c |}  {space 38}{result:35.0000}   {space 51}{result:8318.0000}   {space 54}{result:0.0042}
+  sch_00{space 22} {c |}  {space 39}{result:2.0000}   {space 52}{result:522.0000}   {space 54}{result:0.0038}
+  sch_01{space 22} {c |}  {space 39}{result:2.0000}   {space 52}{result:520.0000}   {space 54}{result:0.0038}
+  sch_02{space 22} {c |}  {space 39}{result:3.0000}   {space 52}{result:518.0000}   {space 54}{result:0.0058}
+  sch_03{space 22} {c |}  {space 39}{result:2.0000}   {space 52}{result:515.0000}   {space 54}{result:0.0039}
+  sch_04{space 22} {c |}  {space 39}{result:1.0000}   {space 52}{result:175.0000}   {space 54}{result:0.0057}
+  sch_05{space 22} {c |}  {space 39}{result:1.0000}   {space 52}{result:285.0000}   {space 54}{result:0.0035}
+  sch_06{space 22} {c |}  {space 39}{result:1.0000}   {space 52}{result:150.0000}   {space 54}{result:0.0067}
+  sema008{space 21} {c |}  {space 39}{result:6.0000}   {space 52}{result:709.0000}   {space 54}{result:0.0085}
+  sema009{space 21} {c |}  {space 39}{result:7.0000}   {space 52}{result:702.0000}   {space 54}{result:0.0100}
+  sema014{space 21} {c |}  {space 39}{result:3.0000}   {space 52}{result:600.0000}   {space 54}{result:0.0050}
+  sema015{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  sema016{space 21} {c |}  {space 39}{result:3.0000}   {space 52}{result:637.0000}   {space 54}{result:0.0047}
+  sema018{space 21} {c |}  {space 39}{result:1.0000}   {space 52}{result:625.0000}   {space 54}{result:0.0016}
+  sema024{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  sema026{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  sema027{space 21} {c |}  {space 39}{result:1.0000}   {space 52}{result:616.0000}   {space 54}{result:0.0016}
+  sema028{space 21} {c |}  {space 39}{result:2.0000}   {space 52}{result:616.0000}   {space 54}{result:0.0032}
+  sema030{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  sema032{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  sema033{space 21} {c |}  {space 39}{result:1.0000}   {space 52}{result:625.0000}   {space 54}{result:0.0016}
+  semx001{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  semx002{space 21} {c |}  {space 39}{result:1.0000}   {space 53}{result:58.0000}   {space 54}{result:0.0172}
+  semz008{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  semz009{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  semz014{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  semz016{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  semz018{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  semz026{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  semz027{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  semz028{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  semz030{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  semz032{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  semz033{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  skpp_00{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  skpp_01{space 21} {c |}  {space 39}{result:8.0000}   {space 51}{result:6994.0000}   {space 54}{result:0.0011}
+  skpp_02{space 21} {c |}  {space 39}{result:2.0000}   {space 51}{result:6986.0000}   {space 54}{result:0.0003}
+  skpp_03{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  skpp_04{space 21} {c |}  {space 39}{result:1.0000}   {space 51}{result:6984.0000}   {space 54}{result:0.0001}
+  skpp_05{space 21} {c |}  {space 39}{result:5.0000}   {space 51}{result:6984.0000}   {space 54}{result:0.0007}
+  splitLanding_emp{space 12} {c |}  {space 39}{result:1.0000}   {space 51}{result:1160.0000}   {space 54}{result:0.0009}
+  splitLanding_sem{space 12} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  splitLanding_stu{space 12} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  splitLanding_voc{space 12} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  stu_00{space 22} {c |}  {space 38}{result:31.0000}   {space 51}{result:6019.0000}   {space 54}{result:0.0052}
+  stu_01{space 22} {c |}  {space 38}{result:15.0000}   {space 51}{result:4612.0000}   {space 54}{result:0.0033}
+  stu_02{space 22} {c |}  {space 39}{result:4.0000}   {space 51}{result:5973.0000}   {space 54}{result:0.0007}
+  stu_03{space 22} {c |}  {space 39}{result:2.0000}   {space 51}{result:5969.0000}   {space 54}{result:0.0003}
+  stu_04{space 22} {c |}  {space 39}{result:6.0000}   {space 51}{result:4594.0000}   {space 54}{result:0.0013}
+  stu_05{space 22} {c |}  {space 39}{result:5.0000}   {space 51}{result:3630.0000}   {space 54}{result:0.0014}
+  stu_06{space 22} {c |}  {space 39}{result:5.0000}   {space 51}{result:3625.0000}   {space 54}{result:0.0014}
+  stu_07{space 22} {c |}  {space 39}{result:5.0000}   {space 51}{result:3620.0000}   {space 54}{result:0.0014}
+  stu_08{space 22} {c |}  {space 39}{result:3.0000}   {space 51}{result:3616.0000}   {space 54}{result:0.0008}
+  stu_09{space 22} {c |}  {space 39}{result:7.0000}   {space 51}{result:3613.0000}   {space 54}{result:0.0019}
+  stu_10{space 22} {c |}  {space 38}{result:13.0000}   {space 51}{result:3607.0000}   {space 54}{result:0.0036}
+  stu_11{space 22} {c |}  {space 38}{result:18.0000}   {space 51}{result:3593.0000}   {space 54}{result:0.0050}
+  stu_12{space 22} {c |}  {space 38}{result:14.0000}   {space 51}{result:3574.0000}   {space 54}{result:0.0039}
+  stu_13{space 22} {c |}  {space 39}{result:1.0000}   {space 51}{result:5483.0000}   {space 54}{result:0.0002}
+  stu_14{space 22} {c |}  {space 39}{result:2.0000}   {space 51}{result:3079.0000}   {space 54}{result:0.0006}
+  stu_14a{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  stu_15{space 22} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  stu_16{space 22} {c |}  {space 39}{result:5.0000}   {space 51}{result:2886.0000}   {space 54}{result:0.0017}
+  stu_17{space 22} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  stu_18{space 22} {c |}  {space 39}{result:2.0000}   {space 51}{result:5877.0000}   {space 54}{result:0.0003}
+  stu_19{space 22} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  stua008{space 21} {c |}  {space 38}{result:36.0000}   {space 51}{result:6492.0000}   {space 54}{result:0.0055}
+  stua011{space 21} {c |}  {space 39}{result:3.0000}   {space 52}{result:760.0000}   {space 54}{result:0.0039}
+  stua013{space 21} {c |}  {space 38}{result:33.0000}   {space 51}{result:6479.0000}   {space 54}{result:0.0051}
+  stua017{space 21} {c |}  {space 39}{result:2.0000}   {space 52}{result:387.0000}   {space 54}{result:0.0052}
+  stua019{space 21} {c |}  {space 39}{result:5.0000}   {space 51}{result:6455.0000}   {space 54}{result:0.0008}
+  stua020{space 21} {c |}  {space 38}{result:15.0000}   {space 51}{result:6449.0000}   {space 54}{result:0.0023}
+  stua026{space 21} {c |}  {space 39}{result:3.0000}   {space 52}{result:835.0000}   {space 54}{result:0.0036}
+  stua027{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  stua032{space 21} {c |}  {space 39}{result:6.0000}   {space 51}{result:6438.0000}   {space 54}{result:0.0009}
+  stua033{space 21} {c |}  {space 39}{result:2.0000}   {space 52}{result:439.0000}   {space 54}{result:0.0046}
+  stua036{space 21} {c |}  {space 38}{result:11.0000}   {space 51}{result:6432.0000}   {space 54}{result:0.0017}
+  stua038{space 21} {c |}  {space 39}{result:6.0000}   {space 51}{result:6423.0000}   {space 54}{result:0.0009}
+  stua039{space 21} {c |}  {space 38}{result:22.0000}   {space 51}{result:2871.0000}   {space 54}{result:0.0077}
+  stux001{space 21} {c |}  {space 38}{result:17.0000}   {space 52}{result:959.0000}   {space 54}{result:0.0177}
+  stux002{space 21} {c |}  {space 38}{result:46.0000}   {space 52}{result:467.0000}   {space 54}{result:0.0985}
+  stuz008{space 21} {c |}  {space 39}{result:1.0000}   {space 53}{result:72.0000}   {space 54}{result:0.0139}
+  stuz013{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  stuz019{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  stuz020{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  stuz026{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  stuz027{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  stuz036{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  stuz038{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  stuz039{space 21} {c |}  {space 39}{result:1.0000}   {space 54}{result:7.0000}   {space 54}{result:0.1429}
+  surveyDispatcher{space 12} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  suv_00{space 22} {c |}  {space 39}{result:7.0000}   {space 51}{result:3853.0000}   {space 54}{result:0.0018}
+  suv_01{space 22} {c |}  {space 39}{result:3.0000}   {space 51}{result:3472.0000}   {space 54}{result:0.0009}
+  suv_02{space 22} {c |}  {space 39}{result:1.0000}   {space 51}{result:1117.0000}   {space 54}{result:0.0009}
+  suv_03{space 22} {c |}  {space 39}{result:1.0000}   {space 51}{result:1026.0000}   {space 54}{result:0.0010}
+  suv_04{space 22} {c |}  {space 39}{result:1.0000}   {space 51}{result:1016.0000}   {space 54}{result:0.0010}
+  uema008{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  uema009{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  uemz008{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  voca008{space 21} {c |}  {space 38}{result:10.0000}   {space 51}{result:1775.0000}   {space 54}{result:0.0056}
+  voca009{space 21} {c |}  {space 39}{result:1.0000}   {space 51}{result:1708.0000}   {space 54}{result:0.0006}
+  voca010{space 21} {c |}  {space 39}{result:2.0000}   {space 51}{result:1702.0000}   {space 54}{result:0.0012}
+  voca011{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  voca013{space 21} {c |}  {space 38}{result:10.0000}   {space 51}{result:1698.0000}   {space 54}{result:0.0059}
+  voca018{space 21} {c |}  {space 39}{result:2.0000}   {space 51}{result:1677.0000}   {space 54}{result:0.0012}
+  voca019{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  voca021{space 21} {c |}  {space 39}{result:2.0000}   {space 51}{result:1685.0000}   {space 54}{result:0.0012}
+  voca022{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  voca023{space 21} {c |}  {space 38}{result:24.0000}   {space 51}{result:1258.0000}   {space 54}{result:0.0191}
+  vocx001{space 21} {c |}  {space 39}{result:6.0000}   {space 52}{result:776.0000}   {space 54}{result:0.0077}
+  vocx002{space 21} {c |}  {space 38}{result:10.0000}   {space 52}{result:167.0000}   {space 54}{result:0.0599}
+  vocz008{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  vocz009{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  vocz013{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  vocz021{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  vocz022{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  vocz023{space 21} {c |}  {space 39}{result:0.0000}   {space 54}{result:0.0000}   {space 59}{result:.}
+  zwischen_cal{space 16} {c |}  {space 38}{result:32.0000}   {space 51}{result:8249.0000}   {space 54}{result:0.0039}
+  Total{space 23} {c |}  {space 36}{result:9085.0000}   {space 52}{result:5.36e+05}   {space 54}{result:0.0170}
+{hline 30}{c -}{c BT}{c -}{c -}{hline 45}{c -}{c -}{c -}{hline 60}{c -}{c -}{c -}{hline 60}
+
+{com}. 
+. 
+. quiet: tabout page using "slc_Stube18-4_abbrecher_${c -(}version{c )-}.xls", ///
+>         c(count abbrecher mean dropoutrate count dropoutrate) ///
+>         clab(Abbrecher Abbruchquote Seitenbesucher) ///
+>         replace sum ///
+>         f(0 4 0) ///
+>         style(xlsx) ///
+>         font(bold) dpcomma
+{txt}
+{com}. 
+. 
+. *________Seitenverweildauer ____________________
+. tabstat verwdauer, statistics(mean median min max sd)
+
+{txt}{ralign 12:Variable} {...}
+{c |}      Mean       p50       Min       Max        SD
+{hline 13}{c +}{hline 50}
+{ralign 12:verwdauer} {...}
+{c |}{...}
+ {res} 31.35141    10.147      .037   7677.35  138.4593
+{txt}{hline 13}{c BT}{hline 50}
+
+{com}. 
+. *________Seitenverweildauer nach Seite ____________________
+. table page, stat(n verwdauer) stat(mean verwdauer) stat(median verwdauer) stat(min verwdauer) stat(max verwdauer) nformat(%9.4f)
+{res}
+{smcl}
+{reset}{...}
+{hline 30}{c -}{c TT}{c -}{c -}{hline 28}{c -}{c -}{c -}{hline 8}{c -}{c -}{c -}{hline 8}{c -}{c -}{c -}{hline 13}{c -}{c -}{c -}{hline 13}
+{space 30} {c |}  Number of non-missing values   {space 4}Mean   {space 2}Median   Minimum value   Maximum value
+{hline 30}{c -}{c +}{c -}{c -}{hline 28}{c -}{c -}{c -}{hline 8}{c -}{c -}{c -}{hline 8}{c -}{c -}{c -}{hline 13}{c -}{c -}{c -}{hline 13}
+page{space 26} {c |}  {space 28}   {space 8}   {space 8}   {space 13}   {space 13}
+  aus_00{space 22} {c |}  {space 19}{result:1581.0000}   {space 1}{result:41.2599}   {space 2}{result:2.3410}   {space 7}{result:1.0730}   {space 4}{result:1872.7970}
+  aus_01{space 22} {c |}  {space 19}{result:1570.0000}   {space 1}{result:21.3486}   {space 1}{result:10.0085}   {space 7}{result:2.7520}   {space 4}{result:1848.7970}
+  aus_02{space 22} {c |}  {space 19}{result:1561.0000}   {space 1}{result:54.7224}   {space 1}{result:35.5300}   {space 7}{result:2.0390}   {space 4}{result:1864.6980}
+  backwardsBlock_doca008{space 6} {c |}  {space 20}{result:137.0000}   {space 2}{result:0.1297}   {space 2}{result:0.1020}   {space 7}{result:0.0530}   {space 7}{result:1.1410}
+  backwardsBlock_empa009{space 6} {c |}  {space 19}{result:2678.0000}   {space 2}{result:0.1957}   {space 2}{result:0.1060}   {space 7}{result:0.0440}   {space 6}{result:21.7050}
+  backwardsBlock_empa014{space 6} {c |}  {space 20}{result:261.0000}   {space 2}{result:0.1233}   {space 2}{result:0.0860}   {space 7}{result:0.0380}   {space 7}{result:2.2000}
+  backwardsBlock_empa019{space 6} {c |}  {space 20}{result:223.0000}   {space 2}{result:0.1506}   {space 2}{result:0.0920}   {space 7}{result:0.0500}   {space 7}{result:2.1620}
+  backwardsBlock_empa027{space 6} {c |}  {space 20}{result:401.0000}   {space 2}{result:0.1283}   {space 2}{result:0.0900}   {space 7}{result:0.0370}   {space 7}{result:3.4060}
+  backwardsBlock_empa031{space 6} {c |}  {space 20}{result:153.0000}   {space 2}{result:0.1278}   {space 2}{result:0.0880}   {space 7}{result:0.0480}   {space 7}{result:1.7970}
+  backwardsBlock_empa036{space 6} {c |}  {space 20}{result:450.0000}   {space 2}{result:0.1628}   {space 2}{result:0.0950}   {space 7}{result:0.0450}   {space 7}{result:2.5580}
+  backwardsBlock_feda008{space 6} {c |}  {space 20}{result:328.0000}   {space 2}{result:0.1415}   {space 2}{result:0.0915}   {space 7}{result:0.0450}   {space 7}{result:2.4090}
+  backwardsBlock_inta008{space 6} {c |}  {space 19}{result:1914.0000}   {space 2}{result:0.1716}   {space 2}{result:0.1040}   {space 7}{result:0.0390}   {space 7}{result:3.5130}
+  backwardsBlock_joba001{space 6} {c |}  {space 19}{result:2594.0000}   {space 2}{result:0.1678}   {space 2}{result:0.1110}   {space 7}{result:0.0400}   {space 7}{result:3.4930}
+  backwardsBlock_mpla008{space 6} {c |}  {space 21}{result:90.0000}   {space 2}{result:0.1451}   {space 2}{result:0.0920}   {space 7}{result:0.0540}   {space 7}{result:1.2390}
+  backwardsBlock_otha008{space 6} {c |}  {space 19}{result:1574.0000}   {space 2}{result:0.1954}   {space 2}{result:0.1135}   {space 7}{result:0.0420}   {space 7}{result:4.8050}
+  backwardsBlock_sema008{space 6} {c |}  {space 20}{result:559.0000}   {space 2}{result:0.1626}   {space 2}{result:0.0950}   {space 7}{result:0.0410}   {space 7}{result:2.1380}
+  backwardsBlock_sema018{space 6} {c |}  {space 21}{result:40.0000}   {space 2}{result:0.2011}   {space 2}{result:0.1255}   {space 7}{result:0.0570}   {space 7}{result:0.8980}
+  backwardsBlock_stua008{space 6} {c |}  {space 19}{result:6492.0000}   {space 2}{result:0.2137}   {space 2}{result:0.1210}   {space 7}{result:0.0400}   {space 6}{result:15.0800}
+  backwardsBlock_stua013{space 6} {c |}  {space 20}{result:305.0000}   {space 2}{result:0.1427}   {space 2}{result:0.0970}   {space 7}{result:0.0460}   {space 7}{result:1.6770}
+  backwardsBlock_stua019{space 6} {c |}  {space 20}{result:356.0000}   {space 2}{result:0.2069}   {space 2}{result:0.1110}   {space 7}{result:0.0430}   {space 7}{result:7.4730}
+  backwardsBlock_stua038{space 6} {c |}  {space 20}{result:925.0000}   {space 2}{result:0.1733}   {space 2}{result:0.1010}   {space 7}{result:0.0400}   {space 7}{result:3.2090}
+  backwardsBlock_uema008{space 6} {c |}  {space 20}{result:354.0000}   {space 2}{result:0.1263}   {space 2}{result:0.0905}   {space 7}{result:0.0450}   {space 7}{result:1.7310}
+  backwardsBlock_voca008{space 6} {c |}  {space 19}{result:1774.0000}   {space 2}{result:0.1496}   {space 2}{result:0.0910}   {space 7}{result:0.0430}   {space 6}{result:13.9870}
+  backwardsBlock_voca009{space 6} {c |}  {space 21}{result:20.0000}   {space 2}{result:0.1090}   {space 2}{result:0.1025}   {space 7}{result:0.0470}   {space 7}{result:0.2260}
+  backwardsBlock_voca013{space 6} {c |}  {space 21}{result:48.0000}   {space 2}{result:0.2435}   {space 2}{result:0.1285}   {space 7}{result:0.0590}   {space 7}{result:2.4560}
+  beg_00{space 22} {c |}  {space 19}{result:8670.0000}   {space 1}{result:19.0824}   {space 2}{result:3.5450}   {space 7}{result:0.4830}   {space 4}{result:3603.2050}
+  beg_01{space 22} {c |}  {space 19}{result:8688.0000}   {space 1}{result:19.7329}   {space 2}{result:6.4930}   {space 7}{result:1.4940}   {space 4}{result:2695.5740}
+  beg_02{space 22} {c |}  {space 19}{result:8471.0000}   {result:109.8822}   {space 1}{result:61.0240}   {space 7}{result:3.9730}   {space 4}{result:5519.8450}
+  cal_00{space 22} {c |}  {space 19}{result:7734.0000}   {space 1}{result:17.4361}   {space 2}{result:2.3610}   {space 7}{result:1.0400}   {space 4}{result:3615.0410}
+  calendar{space 20} {c |}  {space 19}{result:7907.0000}   {result:302.5845}   {result:186.5210}   {space 7}{result:2.7140}   {space 4}{result:5609.0610}
+  defaultLanding_doc{space 10} {c |}  {space 20}{result:137.0000}   {space 1}{result:17.9247}   {space 2}{result:3.2870}   {space 7}{result:1.3090}   {space 4}{result:1805.6320}
+  defaultLanding_emp{space 10} {c |}  {space 19}{result:2588.0000}   {space 1}{result:11.0613}   {space 2}{result:3.8305}   {space 7}{result:0.0460}   {space 4}{result:1831.9120}
+  defaultLanding_fed{space 10} {c |}  {space 20}{result:331.0000}   {space 2}{result:7.6907}   {space 2}{result:3.9880}   {space 7}{result:1.4250}   {space 5}{result:204.1370}
+  defaultLanding_int{space 10} {c |}  {space 19}{result:1923.0000}   {space 1}{result:15.2490}   {space 2}{result:4.1410}   {space 7}{result:1.3260}   {space 4}{result:3608.3970}
+  defaultLanding_job{space 10} {c |}  {space 19}{result:2604.0000}   {space 1}{result:20.3583}   {space 2}{result:5.0140}   {space 7}{result:1.2990}   {space 4}{result:1936.4200}
+  defaultLanding_mpl{space 10} {c |}  {space 21}{result:90.0000}   {space 2}{result:6.0371}   {space 2}{result:4.0550}   {space 7}{result:1.7830}   {space 6}{result:92.2870}
+  defaultLanding_oth{space 10} {c |}  {space 19}{result:1580.0000}   {space 2}{result:7.4562}   {space 2}{result:3.3625}   {space 7}{result:1.0210}   {space 4}{result:1814.0500}
+  defaultLanding_sem{space 10} {c |}  {space 20}{result:566.0000}   {space 1}{result:18.9997}   {space 2}{result:3.6730}   {space 7}{result:0.0540}   {space 4}{result:1828.4870}
+  defaultLanding_stu{space 10} {c |}  {space 19}{result:6492.0000}   {space 1}{result:21.9180}   {space 2}{result:8.7915}   {space 7}{result:1.2310}   {space 4}{result:3627.5510}
+  defaultLanding_uem{space 10} {c |}  {space 20}{result:358.0000}   {space 1}{result:18.0711}   {space 2}{result:3.6010}   {space 7}{result:0.6590}   {space 4}{result:1819.2110}
+  defaultLanding_voc{space 10} {c |}  {space 19}{result:1779.0000}   {space 1}{result:15.1763}   {space 2}{result:5.5300}   {space 7}{result:1.1920}   {space 4}{result:1889.1240}
+  dem_00{space 22} {c |}  {space 19}{result:6977.0000}   {space 2}{result:4.3085}   {space 2}{result:2.0300}   {space 7}{result:1.0330}   {space 4}{result:1815.5630}
+  dem_07{space 22} {c |}  {space 19}{result:6966.0000}   {space 1}{result:19.4560}   {space 1}{result:14.6670}   {space 7}{result:1.3650}   {space 4}{result:1839.5250}
+  dem_10{space 22} {c |}  {space 19}{result:6976.0000}   {space 2}{result:7.7507}   {space 2}{result:5.7240}   {space 7}{result:1.8740}   {space 4}{result:1807.0340}
+  dem_13{space 22} {c |}  {space 19}{result:6977.0000}   {space 2}{result:8.9691}   {space 2}{result:5.6650}   {space 7}{result:1.7280}   {space 4}{result:1722.5300}
+  dem_15{space 22} {c |}  {space 19}{result:4003.0000}   {space 2}{result:4.5105}   {space 2}{result:3.8480}   {space 7}{result:1.5790}   {space 5}{result:129.1930}
+  dem_17{space 22} {c |}  {space 19}{result:4009.0000}   {space 2}{result:8.2739}   {space 2}{result:6.5790}   {space 7}{result:1.0830}   {space 5}{result:208.0500}
+  dem_18{space 22} {c |}  {space 19}{result:6977.0000}   {space 2}{result:2.9303}   {space 2}{result:2.4580}   {space 7}{result:1.2340}   {space 5}{result:524.6370}
+  dem_19{space 22} {c |}  {space 20}{result:362.0000}   {space 2}{result:5.5474}   {space 2}{result:4.3405}   {space 7}{result:1.2150}   {space 6}{result:52.0380}
+  dem_20{space 22} {c |}  {space 20}{result:358.0000}   {space 1}{result:27.3328}   {space 1}{result:17.9665}   {space 7}{result:2.7170}   {space 5}{result:267.7010}
+  dem_36{space 22} {c |}  {space 19}{result:6973.0000}   {space 2}{result:4.0787}   {space 2}{result:3.1980}   {space 7}{result:1.3800}   {space 4}{result:1808.9690}
+  dem_37{space 22} {c |}  {space 19}{result:5424.0000}   {space 1}{result:17.3124}   {space 1}{result:11.9295}   {space 7}{result:1.5330}   {space 4}{result:1828.2190}
+  dem_39{space 22} {c |}  {space 19}{result:6815.0000}   {space 2}{result:9.6343}   {space 2}{result:6.5160}   {space 7}{result:1.1290}   {space 4}{result:1813.4660}
+  doca008{space 21} {c |}  {space 20}{result:137.0000}   {space 1}{result:24.0592}   {space 1}{result:20.3970}   {space 7}{result:5.0080}   {space 5}{result:137.3470}
+  doca011{space 21} {c |}  {space 20}{result:136.0000}   {space 1}{result:17.7646}   {space 1}{result:13.6090}   {space 7}{result:4.0850}   {space 6}{result:76.9660}
+  doca016{space 21} {c |}  {space 20}{result:136.0000}   {space 1}{result:57.8472}   {space 1}{result:19.0520}   {space 7}{result:4.5550}   {space 4}{result:3194.7820}
+  doca022{space 21} {c |}  {space 20}{result:136.0000}   {space 2}{result:7.2783}   {space 2}{result:4.7055}   {space 7}{result:2.5060}   {space 5}{result:117.1100}
+  doca026{space 21} {c |}  {space 20}{result:136.0000}   {space 1}{result:11.4894}   {space 2}{result:8.6380}   {space 7}{result:2.7900}   {space 5}{result:154.3260}
+  doca027{space 21} {c |}  {space 20}{result:108.0000}   {space 1}{result:17.8938}   {space 2}{result:9.6060}   {space 7}{result:2.9590}   {space 5}{result:344.0100}
+  doca029{space 21} {c |}  {space 20}{result:136.0000}   {space 2}{result:8.7938}   {space 2}{result:6.6055}   {space 7}{result:3.0830}   {space 5}{result:134.9320}
+  doca030{space 21} {c |}  {space 22}{result:7.0000}   {space 2}{result:8.2836}   {space 2}{result:8.1800}   {space 7}{result:5.0060}   {space 6}{result:10.9610}
+  doca032{space 21} {c |}  {space 22}{result:4.0000}   {space 1}{result:25.7365}   {space 1}{result:20.4555}   {space 6}{result:10.9530}   {space 6}{result:51.0820}
+  doca035{space 21} {c |}  {space 20}{result:136.0000}   {space 1}{result:26.3759}   {space 2}{result:7.7290}   {space 7}{result:1.4170}   {space 4}{result:1812.7420}
+  doca037{space 21} {c |}  {space 20}{result:136.0000}   {space 1}{result:25.5420}   {space 1}{result:23.0040}   {space 7}{result:2.0450}   {space 5}{result:167.3270}
+  doca039{space 21} {c |}  {space 20}{result:135.0000}   {space 1}{result:25.1845}   {space 2}{result:9.3500}   {space 7}{result:1.3330}   {space 4}{result:1827.7680}
+  doca042{space 21} {c |}  {space 20}{result:135.0000}   {space 2}{result:8.7947}   {space 2}{result:6.3100}   {space 7}{result:1.6810}   {space 6}{result:48.8290}
+  doca044{space 21} {c |}  {space 21}{result:18.0000}   {space 1}{result:26.0442}   {space 1}{result:19.7645}   {space 7}{result:6.1850}   {space 6}{result:92.2780}
+  emp_01{space 22} {c |}  {space 19}{result:1634.0000}   {space 2}{result:7.5636}   {space 2}{result:5.4665}   {space 7}{result:2.2880}   {space 5}{result:328.1000}
+  emp_02{space 22} {c |}  {space 19}{result:1633.0000}   {space 1}{result:38.9697}   {space 1}{result:23.2990}   {space 7}{result:4.8310}   {space 4}{result:1826.5910}
+  emp_03{space 22} {c |}  {space 19}{result:1629.0000}   {space 1}{result:48.7424}   {space 1}{result:30.9400}   {space 7}{result:0.8270}   {space 4}{result:1852.5860}
+  emp_04{space 22} {c |}  {space 19}{result:1624.0000}   {space 1}{result:86.8744}   {space 1}{result:62.2900}   {space 7}{result:1.1870}   {space 4}{result:1885.1790}
+  emp_09{space 22} {c |}  {space 20}{result:774.0000}   {space 1}{result:43.6960}   {space 1}{result:28.4840}   {space 7}{result:2.8340}   {space 4}{result:1824.3000}
+  empa009{space 21} {c |}  {space 19}{result:4637.0000}   {result:104.6580}   {space 1}{result:62.2890}   {space 7}{result:5.2430}   {space 4}{result:3743.8620}
+  empa012{space 21} {c |}  {space 20}{result:423.0000}   {space 1}{result:26.9595}   {space 1}{result:14.8560}   {space 7}{result:1.3760}   {space 4}{result:1808.9440}
+  empa014{space 21} {c |}  {space 19}{result:4642.0000}   {space 1}{result:23.2449}   {space 1}{result:11.9300}   {space 7}{result:2.0410}   {space 4}{result:3670.7830}
+  empa015{space 21} {c |}  {space 19}{result:4628.0000}   {space 1}{result:46.7257}   {space 1}{result:31.2640}   {space 7}{result:2.3770}   {space 4}{result:1918.4740}
+  empa016{space 21} {c |}  {space 19}{result:4625.0000}   {space 1}{result:12.0702}   {space 2}{result:7.5670}   {space 7}{result:2.1510}   {space 4}{result:1829.4480}
+  empa017{space 21} {c |}  {space 20}{result:359.0000}   {space 1}{result:18.9207}   {space 2}{result:9.5560}   {space 7}{result:1.0990}   {space 4}{result:1820.9360}
+  empa019{space 21} {c |}  {space 19}{result:4595.0000}   {space 1}{result:50.8170}   {space 1}{result:29.8790}   {space 7}{result:3.7950}   {space 4}{result:3785.2050}
+  empa025{space 21} {c |}  {space 20}{result:275.0000}   {space 1}{result:17.3191}   {space 1}{result:11.7980}   {space 7}{result:1.2950}   {space 5}{result:193.4730}
+  empa027{space 21} {c |}  {space 19}{result:4591.0000}   {space 1}{result:21.5821}   {space 1}{result:12.7310}   {space 7}{result:2.5010}   {space 4}{result:1836.4970}
+  empa029{space 21} {c |}  {space 20}{result:462.0000}   {space 1}{result:16.3063}   {space 1}{result:11.9805}   {space 7}{result:1.5750}   {space 5}{result:226.7550}
+  empa031{space 21} {c |}  {space 19}{result:4581.0000}   {space 1}{result:38.6274}   {space 1}{result:24.2840}   {space 7}{result:4.5400}   {space 4}{result:1968.4900}
+  empa034{space 21} {c |}  {space 20}{result:190.0000}   {space 1}{result:28.9283}   {space 1}{result:11.8250}   {space 7}{result:2.0330}   {space 4}{result:1867.0180}
+  empa036{space 21} {c |}  {space 19}{result:4577.0000}   {space 1}{result:21.6122}   {space 1}{result:12.1930}   {space 7}{result:2.4570}   {space 4}{result:1956.7100}
+  empa038{space 21} {c |}  {space 20}{result:542.0000}   {space 1}{result:18.6187}   {space 1}{result:11.1230}   {space 7}{result:1.4620}   {space 5}{result:535.7460}
+  empa042{space 21} {c |}  {space 19}{result:4572.0000}   {space 1}{result:59.4302}   {space 1}{result:36.4465}   {space 7}{result:4.7090}   {space 4}{result:3611.8070}
+  empa045{space 21} {c |}  {space 19}{result:4529.0000}   {space 1}{result:19.4857}   {space 1}{result:12.0890}   {space 7}{result:0.2210}   {space 4}{result:1822.6810}
+  empa046{space 21} {c |}  {space 19}{result:4511.0000}   {space 1}{result:37.5198}   {space 1}{result:23.8330}   {space 7}{result:2.5870}   {space 4}{result:1978.0190}
+  empa048{space 21} {c |}  {space 19}{result:4539.0000}   {space 1}{result:26.0090}   {space 1}{result:14.6180}   {space 7}{result:1.5820}   {space 4}{result:3650.3710}
+  empa049{space 21} {c |}  {space 19}{result:4495.0000}   {space 1}{result:48.8921}   {space 1}{result:21.9230}   {space 7}{result:1.5860}   {space 4}{result:3622.9800}
+  empa050{space 21} {c |}  {space 20}{result:190.0000}   {space 1}{result:19.0256}   {space 1}{result:13.8560}   {space 7}{result:0.5080}   {space 5}{result:171.5140}
+  empa051{space 21} {c |}  {space 19}{result:4477.0000}   {space 1}{result:36.0896}   {space 1}{result:18.7500}   {space 7}{result:1.1250}   {space 4}{result:5434.4910}
+  empa052{space 21} {c |}  {space 20}{result:756.0000}   {space 1}{result:21.8913}   {space 1}{result:13.0710}   {space 7}{result:0.9590}   {space 5}{result:539.5830}
+  empa055{space 21} {c |}  {space 19}{result:4442.0000}   {space 1}{result:13.7925}   {space 2}{result:7.8410}   {space 7}{result:0.6150}   {space 4}{result:1823.4680}
+  empa056{space 21} {c |}  {space 19}{result:4408.0000}   {space 1}{result:61.2282}   {space 1}{result:34.9515}   {space 7}{result:1.5710}   {space 4}{result:3633.2930}
+  empa068{space 21} {c |}  {space 19}{result:4441.0000}   {space 1}{result:18.8334}   {space 2}{result:8.3840}   {space 7}{result:1.1250}   {space 4}{result:1848.3100}
+  empa069{space 21} {c |}  {space 19}{result:4471.0000}   {space 1}{result:11.7619}   {space 2}{result:6.5720}   {space 7}{result:1.0000}   {space 4}{result:1821.6490}
+  empa070{space 21} {c |}  {space 19}{result:4445.0000}   {space 1}{result:26.7965}   {space 1}{result:13.1020}   {space 7}{result:1.1460}   {space 4}{result:1945.0180}
+  empa072{space 21} {c |}  {space 19}{result:4436.0000}   {space 1}{result:20.2981}   {space 1}{result:10.9055}   {space 7}{result:1.5640}   {space 4}{result:1827.6860}
+  empa075{space 21} {c |}  {space 19}{result:4445.0000}   {space 1}{result:22.1492}   {space 1}{result:13.0690}   {space 7}{result:1.1000}   {space 4}{result:1950.8590}
+  empx001{space 21} {c |}  {space 20}{result:738.0000}   {space 1}{result:25.2870}   {space 1}{result:12.5260}   {space 7}{result:1.5920}   {space 4}{result:1830.4030}
+  empx002{space 21} {c |}  {space 20}{result:354.0000}   {space 1}{result:53.0099}   {space 1}{result:29.2160}   {space 7}{result:0.2300}   {space 4}{result:1817.8320}
+  empz009{space 21} {c |}  {space 21}{result:14.0000}   {space 1}{result:34.7069}   {space 1}{result:30.2050}   {space 7}{result:1.8770}   {space 6}{result:95.2870}
+  empz014{space 21} {c |}  {space 21}{result:14.0000}   {space 1}{result:12.7501}   {space 2}{result:4.0935}   {space 7}{result:2.0480}   {space 6}{result:95.7720}
+  empz015{space 21} {c |}  {space 21}{result:13.0000}   {space 1}{result:16.1832}   {space 2}{result:6.4600}   {space 7}{result:2.4200}   {space 6}{result:80.5290}
+  empz019{space 21} {c |}  {space 21}{result:14.0000}   {space 2}{result:7.7076}   {space 2}{result:5.0495}   {space 7}{result:1.6580}   {space 6}{result:23.1550}
+  empz027{space 21} {c |}  {space 21}{result:14.0000}   {space 2}{result:3.0780}   {space 2}{result:3.2880}   {space 7}{result:1.5520}   {space 7}{result:4.8100}
+  empz031{space 21} {c |}  {space 21}{result:14.0000}   {space 2}{result:4.7679}   {space 2}{result:3.8660}   {space 7}{result:1.8350}   {space 6}{result:15.6670}
+  empz036{space 21} {c |}  {space 21}{result:14.0000}   {space 2}{result:3.5557}   {space 2}{result:3.4035}   {space 7}{result:1.3230}   {space 7}{result:6.2320}
+  empz042{space 21} {c |}  {space 21}{result:14.0000}   {space 2}{result:8.4959}   {space 2}{result:6.8550}   {space 7}{result:2.6480}   {space 6}{result:28.1710}
+  empz045{space 21} {c |}  {space 21}{result:11.0000}   {space 1}{result:22.1315}   {space 1}{result:17.2270}   {space 7}{result:6.5150}   {space 6}{result:66.1730}
+  empz046{space 21} {c |}  {space 21}{result:11.0000}   {space 1}{result:27.1524}   {space 1}{result:23.0670}   {space 7}{result:6.8900}   {space 6}{result:68.3870}
+  empz048{space 21} {c |}  {space 21}{result:14.0000}   {space 1}{result:15.8826}   {space 1}{result:10.3770}   {space 7}{result:0.1120}   {space 6}{result:61.9430}
+  empz049{space 21} {c |}  {space 21}{result:11.0000}   {space 1}{result:91.7395}   {space 1}{result:36.5810}   {space 6}{result:10.4200}   {space 5}{result:464.3490}
+  empz050{space 21} {c |}  {space 22}{result:1.0000}   {space 1}{result:16.9540}   {space 1}{result:16.9540}   {space 6}{result:16.9540}   {space 6}{result:16.9540}
+  empz051{space 21} {c |}  {space 21}{result:11.0000}   {space 1}{result:14.5909}   {space 1}{result:10.0780}   {space 7}{result:8.3190}   {space 6}{result:31.6450}
+  empz052{space 21} {c |}  {space 22}{result:4.0000}   {space 1}{result:11.0785}   {space 1}{result:12.8415}   {space 7}{result:3.4010}   {space 6}{result:15.2300}
+  empz055{space 21} {c |}  {space 21}{result:11.0000}   {space 1}{result:11.3305}   {space 1}{result:10.1370}   {space 7}{result:3.4170}   {space 6}{result:31.3450}
+  empz056{space 21} {c |}  {space 21}{result:11.0000}   {space 1}{result:42.6514}   {space 1}{result:35.6070}   {space 6}{result:29.4570}   {space 5}{result:110.2490}
+  empz068{space 21} {c |}  {space 21}{result:11.0000}   {space 2}{result:9.6973}   {space 2}{result:7.2580}   {space 7}{result:3.2270}   {space 6}{result:26.9160}
+  empz069{space 21} {c |}  {space 21}{result:11.0000}   {space 2}{result:9.5999}   {space 2}{result:7.3290}   {space 7}{result:2.8560}   {space 6}{result:28.4040}
+  empz070{space 21} {c |}  {space 21}{result:11.0000}   {space 1}{result:12.4408}   {space 1}{result:11.2430}   {space 7}{result:4.2790}   {space 6}{result:31.4320}
+  empz072{space 21} {c |}  {space 21}{result:11.0000}   {space 1}{result:17.8453}   {space 1}{result:12.1020}   {space 7}{result:3.6960}   {space 6}{result:58.1590}
+  empz075{space 21} {c |}  {space 21}{result:11.0000}   {result:352.9768}   {space 1}{result:19.9540}   {space 7}{result:4.1680}   {space 4}{result:3606.9160}
+  end{space 25} {c |}  {space 20}{result:322.0000}   {result:159.8092}   {space 1}{result:58.0750}   {space 7}{result:3.5360}   {space 4}{result:2344.9930}
+  epi_end{space 21} {c |}  {space 19}{result:7230.0000}   {space 2}{result:8.5954}   {space 2}{result:3.9190}   {space 7}{result:1.3330}   {space 4}{result:2124.2880}
+  episodeDispatcher{space 11} {c |}  {space 19}{result:7919.0000}   {space 2}{result:1.7207}   {space 2}{result:0.8650}   {space 7}{result:0.0790}   {space 4}{result:1819.4270}
+  episodeUpdateDispatcher{space 5} {c |}  {space 20}{result:439.0000}   {space 2}{result:0.2098}   {space 2}{result:0.1470}   {space 7}{result:0.0550}   {space 7}{result:2.3270}
+  feda008{space 21} {c |}  {space 20}{result:329.0000}   {space 1}{result:41.8124}   {space 1}{result:29.0040}   {space 7}{result:4.0560}   {space 4}{result:1123.9960}
+  feda010{space 21} {c |}  {space 20}{result:324.0000}   {space 1}{result:19.8100}   {space 2}{result:6.9030}   {space 7}{result:2.9160}   {space 4}{result:3608.0640}
+  gsh_00{space 22} {c |}  {space 19}{result:7018.0000}   {space 2}{result:9.4262}   {space 2}{result:2.0175}   {space 7}{result:0.4570}   {space 4}{result:1868.3980}
+  gsh_01{space 22} {c |}  {space 19}{result:7016.0000}   {space 2}{result:7.3285}   {space 2}{result:4.5130}   {space 7}{result:1.5110}   {space 4}{result:1813.0980}
+  gsh_02{space 22} {c |}  {space 19}{result:6998.0000}   {space 1}{result:84.9158}   {space 1}{result:58.9700}   {space 7}{result:1.6710}   {space 4}{result:5148.4700}
+  gsh_03{space 22} {c |}  {space 19}{result:6996.0000}   {space 1}{result:23.0957}   {space 1}{result:15.1695}   {space 7}{result:1.2540}   {space 4}{result:1828.1690}
+  gsh_04{space 22} {c |}  {space 19}{result:6995.0000}   {space 1}{result:16.8355}   {space 1}{result:10.8770}   {space 7}{result:0.9020}   {space 4}{result:1832.3960}
+  gsh_05{space 22} {c |}  {space 19}{result:6994.0000}   {space 1}{result:16.3942}   {space 1}{result:11.5195}   {space 7}{result:0.7980}   {space 4}{result:1819.2490}
+  index{space 23} {c |}  {space 19}{result:8694.0000}   {result:169.1102}   {space 1}{result:20.1735}   {space 7}{result:2.9230}   {space 4}{result:7677.3500}
+  inta008{space 21} {c |}  {space 19}{result:1912.0000}   {space 1}{result:26.6690}   {space 1}{result:15.6140}   {space 7}{result:2.6600}   {space 4}{result:1822.9420}
+  inta009{space 21} {c |}  {space 19}{result:1905.0000}   {space 1}{result:41.0189}   {space 1}{result:27.4470}   {space 7}{result:1.6350}   {space 4}{result:1983.5790}
+  inta014{space 21} {c |}  {space 19}{result:1905.0000}   {space 2}{result:8.7175}   {space 2}{result:5.0390}   {space 7}{result:1.3120}   {space 4}{result:1803.8190}
+  inta015{space 21} {c |}  {space 20}{result:160.0000}   {space 2}{result:7.4793}   {space 2}{result:6.0360}   {space 7}{result:2.8160}   {space 6}{result:44.5480}
+  inta016{space 21} {c |}  {space 19}{result:1429.0000}   {space 1}{result:13.0797}   {space 2}{result:9.7040}   {space 7}{result:1.1060}   {space 5}{result:792.7490}
+  inta020{space 21} {c |}  {space 19}{result:1828.0000}   {space 1}{result:21.9105}   {space 1}{result:10.3855}   {space 7}{result:1.3030}   {space 4}{result:2080.9230}
+  intx001{space 21} {c |}  {space 20}{result:757.0000}   {space 1}{result:15.9840}   {space 2}{result:8.4400}   {space 7}{result:1.8380}   {space 4}{result:1149.5880}
+  intx002{space 21} {c |}  {space 20}{result:182.0000}   {result:102.8875}   {space 1}{result:31.1070}   {space 7}{result:0.1900}   {space 4}{result:2750.6610}
+  intz008{space 21} {c |}  {space 21}{result:11.0000}   {space 2}{result:7.1266}   {space 2}{result:5.4420}   {space 7}{result:2.3480}   {space 6}{result:16.3620}
+  intz009{space 21} {c |}  {space 21}{result:11.0000}   {space 1}{result:18.7968}   {space 1}{result:14.4980}   {space 7}{result:4.3090}   {space 6}{result:53.9970}
+  intz014{space 21} {c |}  {space 21}{result:11.0000}   {space 2}{result:2.6899}   {space 2}{result:2.4450}   {space 7}{result:1.8280}   {space 7}{result:5.2030}
+  intz015{space 21} {c |}  {space 22}{result:1.0000}   {space 2}{result:6.2020}   {space 2}{result:6.2020}   {space 7}{result:6.2020}   {space 7}{result:6.2020}
+  intz016{space 21} {c |}  {space 22}{result:5.0000}   {space 2}{result:3.0030}   {space 2}{result:2.4540}   {space 7}{result:1.9820}   {space 7}{result:5.6620}
+  intz020{space 21} {c |}  {space 21}{result:10.0000}   {space 2}{result:2.9652}   {space 2}{result:2.4550}   {space 7}{result:1.7430}   {space 7}{result:6.3700}
+  joba001{space 21} {c |}  {space 19}{result:2590.0000}   {space 1}{result:32.6725}   {space 1}{result:12.0830}   {space 7}{result:2.2350}   {space 4}{result:4729.6360}
+  manualBackwardsBlock_empx001 {c |}  {space 20}{result:746.0000}   {space 2}{result:0.1830}   {space 2}{result:0.1300}   {space 7}{result:0.0370}   {space 7}{result:3.2390}
+  manualBackwardsBlock_intx001 {c |}  {space 20}{result:758.0000}   {space 2}{result:0.1812}   {space 2}{result:0.1020}   {space 7}{result:0.0370}   {space 6}{result:15.3860}
+  manualBackwardsBlock_semx001 {c |}  {space 20}{result:726.0000}   {space 2}{result:0.1338}   {space 2}{result:0.0940}   {space 7}{result:0.0390}   {space 7}{result:2.1500}
+  manualBackwardsBlock_stux001 {c |}  {space 20}{result:959.0000}   {space 2}{result:0.2330}   {space 2}{result:0.1550}   {space 7}{result:0.0460}   {space 7}{result:3.5310}
+  manualBackwardsBlock_vocx001 {c |}  {space 20}{result:776.0000}   {space 2}{result:0.1508}   {space 2}{result:0.0980}   {space 7}{result:0.0460}   {space 7}{result:2.3950}
+  mas_01{space 22} {c |}  {space 19}{result:4391.0000}   {space 1}{result:11.3202}   {space 2}{result:6.8340}   {space 7}{result:1.5600}   {space 4}{result:3606.4240}
+  mpla008{space 21} {c |}  {space 21}{result:90.0000}   {space 1}{result:22.7390}   {space 1}{result:10.2715}   {space 7}{result:4.2880}   {space 5}{result:587.8150}
+  mpla013{space 21} {c |}  {space 21}{result:43.0000}   {space 1}{result:14.8999}   {space 1}{result:12.7750}   {space 7}{result:7.1980}   {space 6}{result:31.5140}
+  otha008{space 21} {c |}  {space 19}{result:1572.0000}   {space 1}{result:43.0729}   {space 1}{result:22.7325}   {space 7}{result:4.1450}   {space 4}{result:1882.6460}
+  otha010{space 21} {c |}  {space 19}{result:1075.0000}   {space 1}{result:30.1912}   {space 1}{result:17.2660}   {space 7}{result:1.4950}   {space 4}{result:1839.3680}
+  othz008{space 21} {c |}  {space 21}{result:53.0000}   {space 1}{result:21.6477}   {space 2}{result:9.9270}   {space 7}{result:2.4420}   {space 5}{result:628.9300}
+  othz010{space 21} {c |}  {space 21}{result:27.0000}   {space 1}{result:12.2221}   {space 2}{result:8.1300}   {space 7}{result:2.5340}   {space 6}{result:44.6670}
+  psy_00{space 22} {c |}  {space 19}{result:8461.0000}   {space 1}{result:12.0825}   {space 2}{result:2.4050}   {space 7}{result:1.1560}   {space 4}{result:2612.3340}
+  psy_01{space 22} {c |}  {space 19}{result:8447.0000}   {space 1}{result:16.7704}   {space 2}{result:8.0380}   {space 7}{result:0.3000}   {space 4}{result:1895.0850}
+  psy_03{space 22} {c |}  {space 19}{result:8320.0000}   {result:131.5955}   {space 1}{result:79.8715}   {space 7}{result:1.9270}   {space 4}{result:5443.6000}
+  psy_04{space 22} {c |}  {space 19}{result:8283.0000}   {space 1}{result:37.0038}   {space 1}{result:19.5490}   {space 7}{result:0.3450}   {space 4}{result:4672.7730}
+  sch_00{space 22} {c |}  {space 20}{result:520.0000}   {space 1}{result:11.5773}   {space 2}{result:2.5275}   {space 7}{result:1.1120}   {space 4}{result:2983.1661}
+  sch_01{space 22} {c |}  {space 20}{result:518.0000}   {space 1}{result:34.3549}   {space 1}{result:21.8235}   {space 7}{result:3.8050}   {space 4}{result:1805.7480}
+  sch_02{space 22} {c |}  {space 20}{result:515.0000}   {space 1}{result:76.1015}   {space 1}{result:50.1750}   {space 7}{result:4.8490}   {space 4}{result:1869.2290}
+  sch_03{space 22} {c |}  {space 20}{result:513.0000}   {space 1}{result:68.8388}   {space 1}{result:27.3990}   {space 7}{result:4.4500}   {space 4}{result:1863.1240}
+  sch_04{space 22} {c |}  {space 20}{result:174.0000}   {space 1}{result:17.2960}   {space 1}{result:11.2955}   {space 7}{result:1.7860}   {space 5}{result:315.3460}
+  sch_05{space 22} {c |}  {space 20}{result:284.0000}   {space 1}{result:40.3197}   {space 1}{result:29.1270}   {space 7}{result:3.2310}   {space 4}{result:1849.2370}
+  sch_06{space 22} {c |}  {space 20}{result:149.0000}   {space 1}{result:37.2961}   {space 1}{result:25.4660}   {space 7}{result:4.7330}   {space 5}{result:776.7340}
+  sema008{space 21} {c |}  {space 20}{result:703.0000}   {space 1}{result:26.9178}   {space 2}{result:9.6260}   {space 7}{result:1.6890}   {space 4}{result:1851.2980}
+  sema009{space 21} {c |}  {space 20}{result:695.0000}   {space 1}{result:45.9823}   {space 1}{result:23.7130}   {space 7}{result:4.9100}   {space 4}{result:2406.4860}
+  sema014{space 21} {c |}  {space 20}{result:597.0000}   {space 1}{result:11.0408}   {space 2}{result:8.5780}   {space 7}{result:2.1150}   {space 5}{result:165.9620}
+  sema015{space 21} {c |}  {space 22}{result:6.0000}   {space 1}{result:14.2552}   {space 2}{result:7.4665}   {space 7}{result:2.7400}   {space 6}{result:33.5790}
+  sema016{space 21} {c |}  {space 20}{result:634.0000}   {space 1}{result:80.1896}   {space 1}{result:36.9470}   {space 7}{result:2.1470}   {space 4}{result:2268.6440}
+  sema018{space 21} {c |}  {space 20}{result:624.0000}   {space 1}{result:41.2438}   {space 1}{result:22.3665}   {space 7}{result:1.9840}   {space 4}{result:1835.8400}
+  sema024{space 21} {c |}  {space 21}{result:56.0000}   {space 1}{result:17.8515}   {space 1}{result:12.5730}   {space 7}{result:0.1180}   {space 5}{result:123.6870}
+  sema026{space 21} {c |}  {space 20}{result:619.0000}   {space 1}{result:18.5661}   {space 1}{result:10.3540}   {space 7}{result:0.1320}   {space 4}{result:1016.5360}
+  sema027{space 21} {c |}  {space 20}{result:615.0000}   {space 1}{result:11.2334}   {space 2}{result:9.0420}   {space 7}{result:1.1740}   {space 5}{result:136.0960}
+  sema028{space 21} {c |}  {space 20}{result:614.0000}   {space 1}{result:26.3550}   {space 1}{result:16.0320}   {space 7}{result:1.6630}   {space 4}{result:1864.3100}
+  sema030{space 21} {c |}  {space 20}{result:616.0000}   {space 1}{result:16.5666}   {space 1}{result:10.5280}   {space 7}{result:1.9060}   {space 4}{result:1803.7610}
+  sema032{space 21} {c |}  {space 20}{result:618.0000}   {space 1}{result:13.2495}   {space 2}{result:5.4495}   {space 7}{result:1.3140}   {space 4}{result:1804.8980}
+  sema033{space 21} {c |}  {space 20}{result:624.0000}   {space 1}{result:36.4494}   {space 1}{result:19.2985}   {space 7}{result:2.9450}   {space 4}{result:2284.3750}
+  semx001{space 21} {c |}  {space 20}{result:726.0000}   {space 1}{result:11.4353}   {space 2}{result:4.8405}   {space 7}{result:1.4820}   {space 4}{result:1820.9180}
+  semx002{space 21} {c |}  {space 21}{result:57.0000}   {space 1}{result:23.5377}   {space 1}{result:16.6700}   {space 7}{result:0.0890}   {space 5}{result:159.3540}
+  semz008{space 21} {c |}  {space 22}{result:4.0000}   {space 1}{result:11.8360}   {space 2}{result:7.0310}   {space 7}{result:2.6030}   {space 6}{result:30.6790}
+  semz009{space 21} {c |}  {space 22}{result:4.0000}   {space 2}{result:7.5627}   {space 2}{result:4.9070}   {space 7}{result:4.2740}   {space 6}{result:16.1630}
+  semz014{space 21} {c |}  {space 22}{result:4.0000}   {space 2}{result:2.8495}   {space 2}{result:2.6645}   {space 7}{result:2.6160}   {space 7}{result:3.4530}
+  semz016{space 21} {c |}  {space 22}{result:4.0000}   {space 1}{result:12.9685}   {space 1}{result:13.1070}   {space 7}{result:4.3330}   {space 6}{result:21.3270}
+  semz018{space 21} {c |}  {space 22}{result:4.0000}   {space 1}{result:13.8873}   {space 1}{result:11.2910}   {space 7}{result:5.2490}   {space 6}{result:27.7180}
+  semz026{space 21} {c |}  {space 22}{result:4.0000}   {space 2}{result:9.3245}   {space 1}{result:10.9640}   {space 7}{result:0.1260}   {space 6}{result:15.2440}
+  semz027{space 21} {c |}  {space 22}{result:3.0000}   {space 1}{result:10.5530}   {space 1}{result:10.6830}   {space 6}{result:10.1150}   {space 6}{result:10.8610}
+  semz028{space 21} {c |}  {space 22}{result:3.0000}   {space 1}{result:36.5260}   {space 1}{result:29.6310}   {space 6}{result:25.1250}   {space 6}{result:54.8220}
+  semz030{space 21} {c |}  {space 22}{result:3.0000}   {space 1}{result:13.3283}   {space 2}{result:9.3850}   {space 7}{result:6.4420}   {space 6}{result:24.1580}
+  semz032{space 21} {c |}  {space 22}{result:3.0000}   {space 2}{result:8.1577}   {space 2}{result:8.8630}   {space 7}{result:6.2790}   {space 7}{result:9.3310}
+  semz033{space 21} {c |}  {space 22}{result:4.0000}   {space 2}{result:6.3825}   {space 2}{result:6.2175}   {space 7}{result:3.8270}   {space 7}{result:9.2680}
+  skpp_00{space 21} {c |}  {space 19}{result:6994.0000}   {space 2}{result:6.1095}   {space 2}{result:2.1070}   {space 7}{result:0.9700}   {space 4}{result:1921.7900}
+  skpp_01{space 21} {c |}  {space 19}{result:6986.0000}   {space 1}{result:22.8164}   {space 1}{result:12.5310}   {space 7}{result:1.4150}   {space 4}{result:1831.6630}
+  skpp_02{space 21} {c |}  {space 19}{result:6984.0000}   {space 1}{result:10.6736}   {space 2}{result:7.2545}   {space 7}{result:1.1900}   {space 4}{result:1806.7600}
+  skpp_03{space 21} {c |}  {space 19}{result:6984.0000}   {space 2}{result:7.9598}   {space 2}{result:5.9725}   {space 7}{result:1.1300}   {space 4}{result:1806.2710}
+  skpp_04{space 21} {c |}  {space 19}{result:6983.0000}   {space 1}{result:12.6881}   {space 2}{result:9.0340}   {space 7}{result:0.9610}   {space 4}{result:1804.0580}
+  skpp_05{space 21} {c |}  {space 19}{result:6979.0000}   {space 1}{result:50.0767}   {space 1}{result:39.2860}   {space 7}{result:1.2800}   {space 4}{result:1868.0700}
+  splitLanding_emp{space 12} {c |}  {space 19}{result:1159.0000}   {space 2}{result:0.2217}   {space 2}{result:0.1320}   {space 7}{result:0.0480}   {space 7}{result:7.5600}
+  splitLanding_sem{space 12} {c |}  {space 21}{result:40.0000}   {space 2}{result:0.2078}   {space 2}{result:0.1135}   {space 7}{result:0.0640}   {space 7}{result:1.1160}
+  splitLanding_stu{space 12} {c |}  {space 20}{result:940.0000}   {space 2}{result:0.4050}   {space 2}{result:0.2575}   {space 7}{result:0.0590}   {space 6}{result:19.4840}
+  splitLanding_voc{space 12} {c |}  {space 21}{result:66.0000}   {space 2}{result:0.1841}   {space 2}{result:0.1070}   {space 7}{result:0.0540}   {space 7}{result:1.8430}
+  stu_00{space 22} {c |}  {space 19}{result:5988.0000}   {space 1}{result:28.0469}   {space 2}{result:2.2750}   {space 7}{result:1.0610}   {space 4}{result:2100.4520}
+  stu_01{space 22} {c |}  {space 19}{result:4597.0000}   {space 1}{result:45.4562}   {space 1}{result:25.9890}   {space 7}{result:6.2820}   {space 4}{result:2701.6810}
+  stu_02{space 22} {c |}  {space 19}{result:5969.0000}   {space 1}{result:15.8297}   {space 1}{result:10.4950}   {space 7}{result:1.6960}   {space 4}{result:3615.4690}
+  stu_03{space 22} {c |}  {space 19}{result:5967.0000}   {space 1}{result:14.4144}   {space 2}{result:9.0060}   {space 7}{result:1.9020}   {space 4}{result:2527.0930}
+  stu_04{space 22} {c |}  {space 19}{result:4588.0000}   {space 1}{result:41.7138}   {space 1}{result:26.6375}   {space 7}{result:1.9370}   {space 4}{result:3629.3400}
+  stu_05{space 22} {c |}  {space 19}{result:3625.0000}   {space 1}{result:37.8858}   {space 1}{result:22.8540}   {space 7}{result:1.9500}   {space 4}{result:1844.4000}
+  stu_06{space 22} {c |}  {space 19}{result:3620.0000}   {space 1}{result:34.5123}   {space 1}{result:24.2065}   {space 7}{result:0.9620}   {space 4}{result:1894.7980}
+  stu_07{space 22} {c |}  {space 19}{result:3615.0000}   {space 1}{result:24.3975}   {space 1}{result:14.2600}   {space 7}{result:0.3650}   {space 4}{result:1891.2810}
+  stu_08{space 22} {c |}  {space 19}{result:3613.0000}   {space 1}{result:15.5382}   {space 2}{result:9.5520}   {space 7}{result:1.3050}   {space 4}{result:1814.8400}
+  stu_09{space 22} {c |}  {space 19}{result:3606.0000}   {space 1}{result:33.1865}   {space 1}{result:18.3160}   {space 7}{result:1.2590}   {space 4}{result:3604.0570}
+  stu_10{space 22} {c |}  {space 19}{result:3594.0000}   {space 1}{result:49.0027}   {space 1}{result:29.7505}   {space 7}{result:1.5010}   {space 4}{result:1978.8330}
+  stu_11{space 22} {c |}  {space 19}{result:3575.0000}   {space 1}{result:29.0868}   {space 1}{result:15.1480}   {space 7}{result:1.3070}   {space 4}{result:2444.9900}
+  stu_12{space 22} {c |}  {space 19}{result:3560.0000}   {space 1}{result:60.1522}   {space 1}{result:35.9455}   {space 7}{result:1.4050}   {space 4}{result:1968.2020}
+  stu_13{space 22} {c |}  {space 19}{result:5482.0000}   {space 2}{result:9.7954}   {space 2}{result:6.2685}   {space 7}{result:1.2520}   {space 4}{result:1815.8280}
+  stu_14{space 22} {c |}  {space 19}{result:3077.0000}   {space 1}{result:14.0097}   {space 2}{result:9.5770}   {space 7}{result:1.1090}   {space 4}{result:1168.7350}
+  stu_14a{space 21} {c |}  {space 20}{result:290.0000}   {space 1}{result:14.3745}   {space 2}{result:6.1420}   {space 7}{result:1.4360}   {space 4}{result:1813.1830}
+  stu_15{space 22} {c |}  {space 19}{result:3040.0000}   {space 1}{result:15.1021}   {space 1}{result:10.7810}   {space 7}{result:1.9910}   {space 5}{result:958.7880}
+  stu_16{space 22} {c |}  {space 19}{result:2881.0000}   {space 1}{result:24.7054}   {space 1}{result:14.2400}   {space 7}{result:1.5080}   {space 4}{result:1818.4090}
+  stu_17{space 22} {c |}  {space 19}{result:2769.0000}   {space 1}{result:15.2315}   {space 2}{result:9.6860}   {space 7}{result:1.0800}   {space 4}{result:1832.0230}
+  stu_18{space 22} {c |}  {space 19}{result:5875.0000}   {space 2}{result:9.2132}   {space 2}{result:6.2140}   {space 7}{result:0.4470}   {space 4}{result:1833.6090}
+  stu_19{space 22} {c |}  {space 19}{result:5760.0000}   {space 2}{result:6.6709}   {space 2}{result:4.6360}   {space 7}{result:0.3680}   {space 4}{result:1805.9050}
+  stua008{space 21} {c |}  {space 19}{result:6457.0000}   {space 1}{result:48.5702}   {space 1}{result:28.7710}   {space 7}{result:6.5270}   {space 4}{result:2065.0820}
+  stua011{space 21} {c |}  {space 20}{result:757.0000}   {space 1}{result:30.2089}   {space 1}{result:15.7160}   {space 7}{result:1.3760}   {space 4}{result:1825.5030}
+  stua013{space 21} {c |}  {space 19}{result:6445.0000}   {space 1}{result:48.4420}   {space 1}{result:31.5670}   {space 7}{result:2.9920}   {space 4}{result:2845.0041}
+  stua017{space 21} {c |}  {space 20}{result:385.0000}   {space 1}{result:25.5861}   {space 1}{result:13.2660}   {space 7}{result:1.4250}   {space 4}{result:1856.4820}
+  stua019{space 21} {c |}  {space 19}{result:6450.0000}   {space 1}{result:20.1457}   {space 1}{result:11.7520}   {space 7}{result:1.8940}   {space 4}{result:4469.9070}
+  stua020{space 21} {c |}  {space 19}{result:6434.0000}   {space 1}{result:45.9531}   {space 1}{result:32.1615}   {space 7}{result:3.8950}   {space 4}{result:2343.1470}
+  stua026{space 21} {c |}  {space 20}{result:832.0000}   {space 1}{result:18.5523}   {space 1}{result:11.7570}   {space 7}{result:1.0450}   {space 4}{result:1815.0880}
+  stua027{space 21} {c |}  {space 20}{result:262.0000}   {space 2}{result:8.1545}   {space 2}{result:6.1440}   {space 7}{result:1.2110}   {space 6}{result:45.3900}
+  stua032{space 21} {c |}  {space 19}{result:6432.0000}   {space 1}{result:16.4282}   {space 2}{result:8.2560}   {space 7}{result:2.3570}   {space 4}{result:3646.8080}
+  stua033{space 21} {c |}  {space 20}{result:437.0000}   {space 1}{result:22.9888}   {space 1}{result:12.6940}   {space 7}{result:1.7200}   {space 4}{result:1932.1780}
+  stua036{space 21} {c |}  {space 19}{result:6421.0000}   {space 1}{result:28.5979}   {space 1}{result:19.8600}   {space 7}{result:1.9370}   {space 4}{result:2368.7980}
+  stua038{space 21} {c |}  {space 19}{result:6417.0000}   {space 1}{result:21.7017}   {space 1}{result:14.1220}   {space 7}{result:2.5390}   {space 4}{result:1877.2940}
+  stua039{space 21} {c |}  {space 19}{result:2850.0000}   {space 1}{result:61.0690}   {space 1}{result:30.8605}   {space 7}{result:2.1770}   {space 4}{result:3513.6520}
+  stux001{space 21} {c |}  {space 20}{result:941.0000}   {space 1}{result:32.6679}   {space 1}{result:14.1000}   {space 7}{result:1.9190}   {space 4}{result:1997.1640}
+  stux002{space 21} {c |}  {space 20}{result:422.0000}   {space 1}{result:95.0949}   {space 1}{result:47.7945}   {space 7}{result:0.0880}   {space 4}{result:2180.2540}
+  stuz008{space 21} {c |}  {space 21}{result:71.0000}   {space 1}{result:10.5181}   {space 2}{result:7.9050}   {space 7}{result:2.0870}   {space 6}{result:35.2470}
+  stuz013{space 21} {c |}  {space 21}{result:70.0000}   {space 1}{result:19.9298}   {space 2}{result:8.5445}   {space 7}{result:1.1610}   {space 5}{result:609.4070}
+  stuz019{space 21} {c |}  {space 21}{result:70.0000}   {space 1}{result:10.7862}   {space 2}{result:3.1225}   {space 7}{result:1.2440}   {space 5}{result:407.7700}
+  stuz020{space 21} {c |}  {space 21}{result:70.0000}   {space 1}{result:14.4478}   {space 1}{result:12.6695}   {space 7}{result:3.3390}   {space 6}{result:66.3160}
+  stuz026{space 21} {c |}  {space 22}{result:3.0000}   {space 1}{result:10.3823}   {space 2}{result:7.5080}   {space 7}{result:2.7420}   {space 6}{result:20.8970}
+  stuz027{space 21} {c |}  {space 22}{result:2.0000}   {space 2}{result:7.0320}   {space 2}{result:7.0320}   {space 7}{result:2.6230}   {space 6}{result:11.4410}
+  stuz036{space 21} {c |}  {space 21}{result:70.0000}   {space 2}{result:5.4325}   {space 2}{result:4.4875}   {space 7}{result:1.2040}   {space 6}{result:27.9680}
+  stuz038{space 21} {c |}  {space 21}{result:70.0000}   {space 2}{result:4.7000}   {space 2}{result:3.9270}   {space 7}{result:1.7750}   {space 6}{result:14.4900}
+  stuz039{space 21} {c |}  {space 22}{result:6.0000}   {space 1}{result:24.5672}   {space 1}{result:17.7735}   {space 6}{result:10.3390}   {space 6}{result:69.7900}
+  surveyDispatcher{space 12} {c |}  {space 19}{result:7238.0000}   {space 2}{result:0.1198}   {space 2}{result:0.0960}   {space 7}{result:0.0480}   {space 7}{result:3.7290}
+  suv_00{space 22} {c |}  {space 19}{result:3846.0000}   {space 1}{result:12.8514}   {space 2}{result:2.0345}   {space 7}{result:0.9550}   {space 4}{result:1834.7980}
+  suv_01{space 22} {c |}  {space 19}{result:3469.0000}   {space 1}{result:32.2003}   {space 1}{result:18.3030}   {space 7}{result:2.3620}   {space 4}{result:1830.0250}
+  suv_02{space 22} {c |}  {space 19}{result:1116.0000}   {space 1}{result:15.0939}   {space 1}{result:10.3195}   {space 7}{result:1.1320}   {space 4}{result:1487.3510}
+  suv_03{space 22} {c |}  {space 19}{result:1025.0000}   {space 1}{result:11.2351}   {space 2}{result:8.8700}   {space 7}{result:1.3780}   {space 5}{result:513.4460}
+  suv_04{space 22} {c |}  {space 19}{result:1015.0000}   {space 1}{result:25.2456}   {space 1}{result:16.2290}   {space 7}{result:0.8350}   {space 4}{result:1817.0250}
+  uema008{space 21} {c |}  {space 20}{result:356.0000}   {space 1}{result:15.6066}   {space 2}{result:9.8610}   {space 7}{result:3.5080}   {space 5}{result:935.5140}
+  uema009{space 21} {c |}  {space 20}{result:231.0000}   {space 1}{result:10.2788}   {space 2}{result:7.7570}   {space 7}{result:2.7370}   {space 5}{result:158.5520}
+  uemz008{space 21} {c |}  {space 22}{result:1.0000}   {space 1}{result:17.7440}   {space 1}{result:17.7440}   {space 6}{result:17.7440}   {space 6}{result:17.7440}
+  voca008{space 21} {c |}  {space 19}{result:1765.0000}   {space 1}{result:27.5362}   {space 1}{result:13.2460}   {space 7}{result:3.1950}   {space 4}{result:2102.6890}
+  voca009{space 21} {c |}  {space 19}{result:1707.0000}   {space 1}{result:19.4992}   {space 1}{result:13.1120}   {space 7}{result:1.6680}   {space 4}{result:1813.4810}
+  voca010{space 21} {c |}  {space 19}{result:1700.0000}   {space 1}{result:11.5005}   {space 2}{result:6.4560}   {space 7}{result:1.8190}   {space 4}{result:1816.8100}
+  voca011{space 21} {c |}  {space 21}{result:47.0000}   {space 1}{result:15.3456}   {space 1}{result:12.2390}   {space 7}{result:1.2110}   {space 6}{result:60.4720}
+  voca013{space 21} {c |}  {space 19}{result:1688.0000}   {space 1}{result:46.5574}   {space 1}{result:28.5210}   {space 7}{result:1.3040}   {space 4}{result:1964.1710}
+  voca018{space 21} {c |}  {space 19}{result:1675.0000}   {space 1}{result:11.2680}   {space 2}{result:6.4450}   {space 7}{result:2.1360}   {space 4}{result:1814.1960}
+  voca019{space 21} {c |}  {space 21}{result:74.0000}   {space 1}{result:46.5227}   {space 1}{result:13.2405}   {space 7}{result:3.0660}   {space 4}{result:1887.6000}
+  voca021{space 21} {c |}  {space 19}{result:1683.0000}   {space 1}{result:15.5800}   {space 2}{result:8.9340}   {space 7}{result:2.9320}   {space 4}{result:1817.7900}
+  voca022{space 21} {c |}  {space 19}{result:1294.0000}   {space 2}{result:8.8966}   {space 2}{result:6.7335}   {space 7}{result:2.5420}   {space 5}{result:930.3160}
+  voca023{space 21} {c |}  {space 19}{result:1234.0000}   {result:118.4839}   {space 1}{result:46.5500}   {space 7}{result:3.0920}   {space 4}{result:3684.7680}
+  vocx001{space 21} {c |}  {space 20}{result:770.0000}   {space 1}{result:19.4304}   {space 2}{result:7.6490}   {space 7}{result:1.9250}   {space 4}{result:1845.4790}
+  vocx002{space 21} {c |}  {space 20}{result:157.0000}   {space 1}{result:50.3352}   {space 1}{result:32.2770}   {space 7}{result:0.2210}   {space 4}{result:1835.7430}
+  vocz008{space 21} {c |}  {space 22}{result:5.0000}   {space 2}{result:8.8532}   {space 2}{result:5.4710}   {space 7}{result:2.4980}   {space 6}{result:23.7120}
+  vocz009{space 21} {c |}  {space 22}{result:5.0000}   {space 2}{result:5.0476}   {space 2}{result:4.4800}   {space 7}{result:1.8070}   {space 6}{result:10.8170}
+  vocz013{space 21} {c |}  {space 22}{result:5.0000}   {space 2}{result:9.8184}   {space 2}{result:5.9100}   {space 7}{result:1.2880}   {space 6}{result:27.6280}
+  vocz021{space 21} {c |}  {space 22}{result:5.0000}   {space 2}{result:5.5242}   {space 2}{result:3.9440}   {space 7}{result:2.0130}   {space 6}{result:11.3650}
+  vocz022{space 21} {c |}  {space 22}{result:3.0000}   {space 2}{result:7.2820}   {space 2}{result:9.2300}   {space 7}{result:2.1970}   {space 6}{result:10.4190}
+  vocz023{space 21} {c |}  {space 22}{result:3.0000}   {space 1}{result:78.4147}   {space 1}{result:50.8420}   {space 7}{result:7.7730}   {space 5}{result:176.6290}
+  zwischen_cal{space 16} {c |}  {space 19}{result:8217.0000}   {space 1}{result:20.2979}   {space 1}{result:10.4430}   {space 7}{result:0.9790}   {space 4}{result:1876.3340}
+  Total{space 23} {c |}  {space 20}{result:6.15e+05}   {space 1}{result:31.3514}   {space 1}{result:10.1470}   {space 7}{result:0.0370}   {space 4}{result:7677.3500}
+{hline 30}{c -}{c BT}{c -}{c -}{hline 28}{c -}{c -}{c -}{hline 8}{c -}{c -}{c -}{hline 8}{c -}{c -}{c -}{hline 13}{c -}{c -}{c -}{hline 13}
+
+{com}. 
+. quiet: tabout page using "slc_Stube18-4_verwdauer_${c -(}version{c )-}.xls", ///
+>         c(count verwdauer mean verwdauer p50 verwdauer min verwdauer max verwdauer) ///
+>         clab(N mean med min max) ///
+>         replace sum ///
+>         f(0 2 2) ///
+>         style(xlsx) ///
+>         font(bold) dpcomma
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}P:\Zofar\Schulze\esra23_calendar\out\slc_Stube18-4_abbrecher-verwdauer_.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}21 Jun 2023, 11:55:33
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
