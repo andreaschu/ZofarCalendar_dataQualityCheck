@@ -1,19 +1,11 @@
 ****************************************************************************
-** Projekt/ Studie:       Vortrag auf ESRA23
-** 						
-** Erstelldatum:          2023-06-20
-** Bearbeitet von:        Schulze, Andrea
+** Project:			Talk, ESRA23
+** date:			2023-06-20
+** used data sets:	history_2018w3bw4_collapsed.dta
+** created by:		Schulze, Andrea
 ****************************************************************************
 
 version 17
-
-global orig "slc\slc_stube18\"
-glglobal workdir "ZofarCalendar_dataQualityCheck\esra23_calendar\"
-
-global dodir "${workdir}do\"
-global datadir "${workdir}data\"
-global log "${workdir}log\"
-global out "${workdir}out\"
 
 *cd "${workdir}log"
 *cap log close
@@ -24,7 +16,6 @@ use "${datadir}history_2018w3bw4_collapsed.dta", clear
 *************************************************************************
 *************************************************************************
 ****** Indikatoren berechnen **
-
 
 
 *________Anzahl der Besucher pro Seite___________
@@ -64,69 +55,11 @@ label var dauer_sd "Verweildauer: Standardabweichung"
 
 
 
-*nach Modul
-bysort cohort pid modul: egen moduldauer=total(verwdauer)
-label var moduldauer "Bearbeitungsdauer des Moduls pro Befragten"
-
-
-
-cap drop moduldauer_minutes
-bysort cohort: gen moduldauer_minutes = moduldauer / 60
-lab var moduldauer_minutes "Bearbeitungsdauer pro Modul in Minuten"
-
-cap drop moduln
-bysort cohort modul: egen moduln=count(pid)
-
-*table modul, contents(cohort n moduln median time_modul min time_modul max time_modul)
-
-table (cohort modul), stat(freq) ///
-	stat(mean moduldauer_minutes) ///
-	stat(median moduldauer_minutes) ///
-	stat(min moduldauer_minutes) ///
-	stat(max moduldauer_minutes) ///
-	nformat(%9.2f) nototals
-	
-
-
-    /*
-    *_________Boxplot Bearbeitungsdauer nach Modul__________________________________
-    *  (siehe oben: "Fragebogenseiten zu Modul zuordnen" muss zuvor erledigt werden)
-
-        * Labels für Module vorbereiten
-        qui levelsof(modul)
-
-        local levelslist `r(levels)'
-
-        cap drop modul_labeled
-        gen modul_labeled = ""
-
-        foreach modul_name in `"`levelslist'"' {
-            qui levelsof participant_id if modul =="`modul_name'" // Anzahl Befragte im Modul
-            local part_count : word count `r(levels)'
-
-            qui levelsof page if modul =="`modul_name'" // Anzahl pages pro Modul (aus den history-Daten)
-            local page_count : word count `r(levels)'
-
-            replace modul_labeled=`"`modul_name' (n=`part_count', pages: `page_count')"' if modul ==`"`modul_name'"'
-            di `"`modul_name' `page_count' `part_count'"'
-        }
-
-
-    graph hbox moduldauer_minutes, over(modul_labeled, label(labsize(vsmall))) nooutsides ///
-        title("Bearbeitungsdauer nach Modul") ///
-        note("Nacaps (cohort 2020, wave 2)") ///
-        ytitle("Bearbeitungszeit in Minuten", size(small)) ///
-        ylabel( , labsize(vsmall))
-
-    graph save Graph "${doc}ResponseTime_nachModul.gph", replace
-    graph export "${doc}ResponseTime_nachModul.png", as(png) replace
-    */
-
 *_______________________________________________________________
 cap log close
 
 
-log using "${log}StuBe18W3W4_abbrecher-verwdauer.smcl", append
+log using "${out}StuBe18W3W4_abbrecher-verwdauer.smcl", append
 
 *******************************************************************************
 ********************* Auswertungen Abbrüche und Verweildauern **********************
