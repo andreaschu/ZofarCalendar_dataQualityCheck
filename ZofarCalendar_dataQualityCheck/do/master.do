@@ -1,9 +1,9 @@
 ****************************************************************************
-** Projekt/ Studie:       Vortrag auf ESRA23
-** Erstelldatum:          2023-06-20
-** Datensätze:            history.csv, Studienberechtigte 2018.3b
-**						  history.csv, Studienberechtigte 2018.4
-** Bearbeitet von:        Schulze, Andrea
+** Project:			Talk, ESRA23
+** date:			2023-06-20
+** used data sets:	history.csv, Studienberechtigte 2018.3b
+**					history.csv, Studienberechtigte 2018.4
+** created by:		Schulze, Andrea
 ****************************************************************************
 
 
@@ -29,26 +29,33 @@ cd ..
 global root "`c(pwd)'"
 
 
-glglobal workdir "ZofarCalendar_dataQualityCheck\esra23_calendar\"
+global orig "..\slc_stube18\"
+global workdir "..\esra23_calendar\"
+
 global dodir "${workdir}do\"
+global datadir "${workdir}data\"
+global log "${workdir}log\"
+global out "${workdir}out\"
 
-
-
+set maxvar 8000, perm
 *********************************************************************
 
-do "${dodir}append_StuBe18W03W04.do"
-// history_2018w3bw4.dta
+do "${dodir}StuBe18W03W04_History_append.do"
+// out: history_2018w3bw4.dta
 
-do "${dodir}StuBe18W03W04_pageNumModule.do"
+do "${dodir}StuBe18W03W04_History_pageNumModule.do"
 *do "${dodir}historyAufbereitung_StuBe18W03W04.do"
-// history_2018w3bw4_enriched.dta 
+// out: history_2018w3bw4_enriched.dta 
 
 
-do "${dodir}StuBe18W03W04_collapse.do"
-// history_2018w3bw4_collapsed.dta
+do "${dodir}StuBe18W03W04_History_collapse.do"
+// out: history_2018w3bw4_collapsed.dta
 
 do "${dodir}nls_respTime_breakoffs.do"
-// .dta
+// 
 
-*do "${dodir}nls_boxPlot_respTimeModule.do"
-// .dta
+do "${dodir}nls_boxPlot_respTime.do"
+// 
+
+do "${dodir}nls_respTimeCalendar.do"
+// 
