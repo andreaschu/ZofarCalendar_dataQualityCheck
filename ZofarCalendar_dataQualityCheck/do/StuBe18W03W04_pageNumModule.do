@@ -1,19 +1,21 @@
 ****************************************************************************
-** Projekt/ Studie:       Vortrag auf ESRA23
-** 						
-** Erstelldatum:          2023-06-20
-** Bearbeitet von:        Schulze, Andrea
+** Project:			Talk, ESRA23
+** date:			2023-06-20
+** used data sets:	history_2018w3bw4.dta
+** created by:		Schulze, Andrea
 ****************************************************************************
 
+/*
 version 17
 
-global orig "slc\slc_stube18\"
-glglobal workdir "ZofarCalendar_dataQualityCheck\esra23_calendar\"
+global orig "..\slc_stube18\"
+global workdir "..\esra23_calendar\"
 
 global dodir "${workdir}do\"
 global datadir "${workdir}data\"
 global log "${workdir}log\"
 global out "${workdir}out\"
+*/
 
 cd "${workdir}log"
 cap log close
@@ -53,8 +55,8 @@ replace verwdauer=1800 if verwdauer>1800 & verwdauer!=.
 // Seitennummerierung nach Reihenfolge im Fragebogen (QML)
 gen pagenum=.
 
-do "${dodir}definePagenum_StuBe18-3.do"
-do "${dodir}definePagenum_StuBe18-4.do"
+do "${dodir}define_Pagenum_StuBe18-3.do"
+do "${dodir}define_Pagenum_StuBe18-4.do"
 
 tab page if pagenum==.
 
@@ -91,13 +93,43 @@ label var visit "Anzahl des Seitenaufrufes im Verlauf der Befragung"
 *     (siehe auch weiter unten: "Boxplot Bearbeitungsdauer nach Modul")
 gen modul=""
 
-do "${dodir}defineModule_StuBe18-3.do"
-do "${dodir}defineModule_StuBe18-4.do"
+do "${dodir}define_Module_StuBe18-3.do"
+do "${dodir}define_Module_StuBe18-4.do"
 
 label var modul "Fragenmodul"
 
 
+
+
 log close
+
+*__________Paradaten aus Befragungsdaten anspielen ____________________________
+* merge 201803
+/// ismobile ismobile1 ismobile2 
+/// width width1 width2, height height1 height2
+/// uas
+/// jscheck
+
+* merge 201804
+/// ismobile 
+/// width height
+/// jscheck
+
+/*cap drop jscheck ismobile uas jscheck2 ismobile2 jscheck3 ismobile3 width height width2 height2 width3 height3 merge201803 jscheck1 jscheck_stu height_t width_t height1 width1 height_stu width_stu _merge moduldauer moduldauer_minutes moduln cohortstrng modul_labeled screenwidth mobile_view
+save "${datadir}history_2018w3bw4_enriched_dropped.dta", replace
+
+
+use "${datadir}history_2018w3bw4_enriched_dropped.dta", clear 
+*/
+
+merge m:1 token using "${orig}slc_StuBe18-3b\lieferung\studpanel18.3b_export_2021-04-21\csv\data.dta", keepusing(uas jscheck ismobile width height width2 width3 height2 height3 ismobile2 ismobile3 jscheck2 jscheck3)
+
+
+destring jscheck, replace force
+rename _merge merge201803
+ 
+merge m:1 token using "${orig}slc_StuBe18-4\lieferung\slc_Stube18-4_export_2023-06-07\csv\data.dta" , keepusing(uas jscheck ismobile width height width1 width_t width_stu height1 height_t height_stu  jscheck1 jscheck_stu) update
+
 
 save "${datadir}history_2018w3bw4_enriched.dta", replace
 
