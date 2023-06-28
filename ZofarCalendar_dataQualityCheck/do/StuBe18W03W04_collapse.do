@@ -1,19 +1,21 @@
 ****************************************************************************
-** Projekt/ Studie:       Vortrag auf ESRA23
-** 						
-** Erstelldatum:          2023-06-20
-** Bearbeitet von:        Schulze, Andrea
+** Project:			Talk, ESRA23
+** date:			2023-06-20
+** used data sets:	history_2018w3bw4_enriched.dta
+** created by:		Schulze, Andrea
 ****************************************************************************
 
+/*
 version 17
 
-global orig "slc\slc_stube18\"
-glglobal workdir "ZofarCalendar_dataQualityCheck\esra23_calendar\"
+global orig "..\slc_stube18\"
+global workdir "..\esra23_calendar\"
 
 global dodir "${workdir}do\"
 global datadir "${workdir}data\"
 global log "${workdir}log\"
 global out "${workdir}out\"
+*/
 
 *cd "${workdir}log"
 *cap log close
