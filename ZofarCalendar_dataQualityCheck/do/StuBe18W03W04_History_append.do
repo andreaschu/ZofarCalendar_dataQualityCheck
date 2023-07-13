@@ -30,11 +30,11 @@ log using log_append_`: di %tdCY-N-D daily("$S_DATE", "DMY")', append
 *** preparing 2018, wave 3b 
 import delimited "${c2018w3b}history.csv", delimiter(comma) bindquote(strict) clear 
 
-* generate cohort id 
-gen cohort= 201803
+* generate wave id 
+gen wave= 201803
 tostring participant_id, gen(part_id)
 
-* generate unique participant_id, including cohort identifier
+* generate unique participant_id, including wave identifier
 cap drop pid
 gen pid="201803"+part_id
 drop part_id
@@ -45,11 +45,11 @@ save "${datadir}history_2018-3b.dta", replace
 ************************************************************************
 *** preparing 2018, wave 4 
 import delimited "${c2018w4}history.csv", delimiter(comma) bindquote(strict) clear 
-* generate cohort id 
-gen cohort= 201804
+* generate wave id 
+gen wave= 201804
 tostring participant_id, gen(part_id)
 
-* generate unique participant_id, including cohort identifier
+* generate unique participant_id, including wave identifier
 cap drop pid
 gen pid="201804"+part_id
 drop part_id
@@ -61,14 +61,15 @@ save "${datadir}history_2018-4.dta", replace
 append using "${datadir}history_2018-3b.dta"
 
 
-*____________Tester löschen____________________
+*____________delete test cases ____________________
 foreach t of numlist 1/500 {
 	quiet: drop if token=="tester`t'" | token=="part`t'"
 }
 
-*____________Kohorte labeln____________________
-label define cohortlb 201803 "2018, 3. Welle" 201804 "2018, 4. Welle"
-label val cohort cohortlb
+*____________label wave ____________________
+*label define wavelb 201803 "2018, 3. Welle" 201804 "2018, 4. Welle"
+label define wavelb 201803 "static calendar" 201804 "dynamic calendar"
+label val wave wavelb
 
 
 ************************************************************************
@@ -77,4 +78,4 @@ save "${datadir}history_2018w3bw4.dta", replace
 
 ************************************************************************
 *** NOTES:
-* possibly merge instead of append or reshape wide (by cohort)
+* possibly merge instead of append or reshape wide (by wave)
