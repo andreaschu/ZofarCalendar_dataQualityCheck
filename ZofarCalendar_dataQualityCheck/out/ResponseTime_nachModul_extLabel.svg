@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This is a Stata 17.0 generated SVG file (http://www.stata.com) -->
+
+<svg version="1.1" width="5.500in" height="4.000in" viewBox="0 0 3960 2880" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>Stata Graph - Graph</desc>
+	<rect x="0" y="0" width="3960" height="2880" style="fill:#FFFFFF;stroke:none"/>
+	<rect x="0.00" y="0.00" width="3959.88" height="2880.00" style="fill:#FFFFFF"/>
+	<rect x="2.88" y="2.88" width="3954.12" height="2874.24" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<rect x="1210.06" y="103.74" width="2646.08" height="2328.11" style="fill:none;stroke:#000000;stroke-width:5.76"/>
+	<line x1="1308.04" y1="2434.73" x2="1308.04" y2="100.86" style="stroke:#E0E0E0;stroke-width:8.64"/>
+	<line x1="2101.77" y1="2434.73" x2="2101.77" y2="100.86" style="stroke:#E0E0E0;stroke-width:8.64"/>
+	<line x1="2895.38" y1="2434.73" x2="2895.38" y2="100.86" style="stroke:#E0E0E0;stroke-width:8.64"/>
+	<line x1="3689.11" y1="2434.73" x2="3689.11" y2="100.86" style="stroke:#E0E0E0;stroke-width:8.64"/>
+	<rect x="1760.10" y="1988.11" width="696.84" height="288.10" style="fill:#0A7D94"/>
+	<rect x="1762.26" y="1990.27" width="692.52" height="283.78" style="fill:none;stroke:#000000;stroke-width:4.32"/>
+	<line x1="2000.30" y1="2276.20" x2="2000.30" y2="1988.11" style="stroke:#000000;stroke-width:4.32"/>
+	<line x1="1760.10" y1="2132.16" x2="1335.51" y2="2132.16" style="stroke:#000000;stroke-width:4.32"/>
+	<line x1="2456.93" y1="2132.16" x2="3502.25" y2="2132.16" style="stroke:#000000;stroke-width:4.32"/>
+	<line x1="1335.51" y1="2228.68" x2="1335.51" y2="2035.63" style="stroke:#000000;stroke-width:4.32"/>
+	<line x1="3502.25" y1="2228.68" x2="3502.25" y2="2035.63" style="stroke:#000000;stroke-width:4.32"/>
+	<rect x="1760.96" y="1411.78" width="677.90" height="288.22" style="fill:#0A7D94"/>
+	<rect x="1763.12" y="1413.94" width="673.58" height="283.90" style="fill:none;stroke:#000000;stroke-width:4.32"/>
+	<line x1="1914.41" y1="1700.01" x2="1914.41" y2="1411.78" style="stroke:#000000;stroke-width:4.32"/>
+	<line x1="1760.96" y1="1555.83" x2="1386.37" y2="1555.83" style="stroke:#000000;stroke-width:4.32"/>
+	<line x1="2438.86" y1="1555.83" x2="3450.77" y2="1555.83" style="stroke:#000000;stroke-width:4.32"/>
+	<line x1="1386.37" y1="1652.36" x2="1386.37" y2="1459.31" style="stroke:#000000;stroke-width:4.32"/>
+	<line x1="3450.77" y1="1652.36" x2="3450.77" y2="1459.31" style="stroke:#000000;stroke-width:4.32"/>
+	<rect x="1733.74" y="835.59" width="534.97" height="288.10" style="fill:#0A7D94"/>
+	<rect x="1735.90" y="837.75" width="530.65" height="283.78" style="fill:none;stroke:#000000;stroke-width:4.32"/>
+	<line x1="1940.03" y1="1123.69" x2="1940.03" y2="835.59" style="stroke:#000000;stroke-width:4.32"/>
+	<line x1="1733.74" y1="979.64" x2="1317.32" y2="979.64" style="stroke:#000000;stroke-width:4.32"/>
+	<line x1="2268.71" y1="979.64" x2="3070.98" y2="979.64" style="stroke:#000000;stroke-width:4.32"/>
+	<line x1="1317.32" y1="1076.16" x2="1317.32" y2="883.11" style="stroke:#000000;stroke-width:4.32"/>
+	<line x1="3070.98" y1="1076.16" x2="3070.98" y2="883.11" style="stroke:#000000;stroke-width:4.32"/>
+	<rect x="1860.33" y="259.26" width="759.58" height="288.10" style="fill:#0A7D94"/>
+	<rect x="1862.49" y="261.42" width="755.26" height="283.78" style="fill:none;stroke:#000000;stroke-width:4.32"/>
+	<line x1="2078.13" y1="547.36" x2="2078.13" y2="259.26" style="stroke:#000000;stroke-width:4.32"/>
+	<line x1="1860.33" y1="403.31" x2="1368.68" y2="403.31" style="stroke:#000000;stroke-width:4.32"/>
+	<line x1="2619.91" y1="403.31" x2="3758.29" y2="403.31" style="stroke:#000000;stroke-width:4.32"/>
+	<line x1="1368.68" y1="499.84" x2="1368.68" y2="306.79" style="stroke:#000000;stroke-width:4.32"/>
+	<line x1="3758.29" y1="499.84" x2="3758.29" y2="306.79" style="stroke:#000000;stroke-width:4.32"/>
+	<line x1="1207.18" y1="2434.73" x2="3859.02" y2="2434.73" style="stroke:#000000;stroke-width:5.76"/>
+	<line x1="1308.04" y1="2434.73" x2="1308.04" y2="2474.71" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="1308.04" y="2536.58" style="font-family:'Helvetica';font-size:60.02px;fill:#000000" text-anchor="middle">0</text>
+	<line x1="2101.77" y1="2434.73" x2="2101.77" y2="2474.71" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="2101.77" y="2536.58" style="font-family:'Helvetica';font-size:60.02px;fill:#000000" text-anchor="middle">20</text>
+	<line x1="2895.38" y1="2434.73" x2="2895.38" y2="2474.71" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="2895.38" y="2536.58" style="font-family:'Helvetica';font-size:60.02px;fill:#000000" text-anchor="middle">40</text>
+	<line x1="3689.11" y1="2434.73" x2="3689.11" y2="2474.71" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="3689.11" y="2536.58" style="font-family:'Helvetica';font-size:60.02px;fill:#000000" text-anchor="middle">60</text>
+	<text x="2533.16" y="2620.57" style="font-family:'Helvetica';font-size:79.94px;fill:#000000" text-anchor="middle">resonse time (minutes)</text>
+	<line x1="1207.18" y1="2434.73" x2="1207.18" y2="100.86" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="1167.21" y="2153.19" style="font-family:'Helvetica';font-size:60.02px;fill:#000000" text-anchor="end">04, episodes (n=8249, pages: 209)</text>
+	<text x="1167.21" y="1576.87" style="font-family:'Helvetica';font-size:60.02px;fill:#000000" text-anchor="end">04, conventional (n=9085, pages: 76)</text>
+	<text x="1167.21" y="1000.67" style="font-family:'Helvetica';font-size:60.02px;fill:#000000" text-anchor="end">03, episodes (n=8594, pages: 710)</text>
+	<text x="1167.21" y="424.35" style="font-family:'Helvetica';font-size:60.02px;fill:#000000" text-anchor="end">03, conventional (n=9424, pages: 89)</text>
+	<text x="1224.51" y="2737.89" style="font-family:'Helvetica';font-size:79.94px;fill:#000000">excludes outside values</text>
+</svg>

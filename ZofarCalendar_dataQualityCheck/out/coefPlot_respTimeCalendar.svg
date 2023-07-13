@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This is a Stata 17.0 generated SVG file (http://www.stata.com) -->
+
+<svg version="1.1" width="5.500in" height="4.000in" viewBox="0 0 3960 2880" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>Stata Graph - Graph</desc>
+	<rect x="0" y="0" width="3960" height="2880" style="fill:#FFFFFF;stroke:none"/>
+	<rect x="0.00" y="0.00" width="3959.88" height="2880.00" style="fill:#FFFFFF"/>
+	<rect x="2.88" y="2.88" width="3954.12" height="2874.24" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<rect x="456.18" y="103.74" width="3399.96" height="2482.56" style="fill:none;stroke:#000000;stroke-width:5.76"/>
+	<line x1="453.30" y1="411.85" x2="3859.02" y2="411.85" style="stroke:#E0E0E0;stroke-width:8.64"/>
+	<line x1="453.30" y1="1033.96" x2="3859.02" y2="1033.96" style="stroke:#E0E0E0;stroke-width:8.64"/>
+	<line x1="453.30" y1="1656.07" x2="3859.02" y2="1656.07" style="stroke:#E0E0E0;stroke-width:8.64"/>
+	<line x1="453.30" y1="2278.18" x2="3859.02" y2="2278.18" style="stroke:#E0E0E0;stroke-width:8.64"/>
+	<line x1="1013.51" y1="411.85" x2="1221.41" y2="411.85" style="stroke:#006000;stroke-width:8.64"/>
+	<line x1="913.40" y1="1033.96" x2="1125.14" y2="1033.96" style="stroke:#006000;stroke-width:8.64"/>
+	<line x1="2328.98" y1="1656.07" x2="3487.89" y2="1656.07" style="stroke:#006000;stroke-width:8.64"/>
+	<line x1="1611.97" y1="2278.18" x2="2327.99" y2="2278.18" style="stroke:#006000;stroke-width:8.64"/>
+	<circle cx="1117.46" cy="411.85" r="26.35" style="fill:#006000"/>
+	<circle cx="1117.46" cy="411.85" r="22.03" style="fill:none;stroke:#006000;stroke-width:8.64"/>
+	<circle cx="1019.21" cy="1033.96" r="26.35" style="fill:#006000"/>
+	<circle cx="1019.21" cy="1033.96" r="22.03" style="fill:none;stroke:#006000;stroke-width:8.64"/>
+	<circle cx="2908.37" cy="1656.07" r="26.35" style="fill:#006000"/>
+	<circle cx="2908.37" cy="1656.07" r="22.03" style="fill:none;stroke:#006000;stroke-width:8.64"/>
+	<circle cx="1969.98" cy="2278.18" r="26.35" style="fill:#006000"/>
+	<circle cx="1969.98" cy="2278.18" r="22.03" style="fill:none;stroke:#006000;stroke-width:8.64"/>
+	<line x1="453.30" y1="2589.18" x2="453.30" y2="100.86" style="stroke:#000000;stroke-width:5.76"/>
+	<line x1="453.30" y1="411.85" x2="413.33" y2="411.85" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="393.28" y="446.88" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="end">1._at</text>
+	<line x1="453.30" y1="1033.96" x2="413.33" y2="1033.96" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="393.28" y="1068.99" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="end">2._at</text>
+	<line x1="453.30" y1="1656.07" x2="413.33" y2="1656.07" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="393.28" y="1691.10" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="end">3._at</text>
+	<line x1="453.30" y1="2278.18" x2="413.33" y2="2278.18" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="393.28" y="2313.21" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="end">4._at</text>
+	<line x1="453.30" y1="2589.18" x2="3859.02" y2="2589.18" style="stroke:#000000;stroke-width:5.76"/>
+	<line x1="516.66" y1="2589.18" x2="516.66" y2="2629.15" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="516.66" y="2719.13" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="middle">100</text>
+	<line x1="1609.62" y1="2589.18" x2="1609.62" y2="2629.15" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="1609.62" y="2719.13" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="middle">150</text>
+	<line x1="2702.70" y1="2589.18" x2="2702.70" y2="2629.15" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="2702.70" y="2719.13" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="middle">200</text>
+	<line x1="3795.78" y1="2589.18" x2="3795.78" y2="2629.15" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="3795.78" y="2719.13" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="middle">250</text>
+</svg>
