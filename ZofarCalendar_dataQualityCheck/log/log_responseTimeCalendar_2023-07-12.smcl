@@ -1,0 +1,149 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}P:\Zofar\Schulze\esra23_calendar\log\log_responseTimeCalendar_2023-07-12.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}12 Jul 2023, 22:05:14
+{txt}
+{com}. 
+. 
+. 
+. *____________ response time für Kalenderseiten (erster Seitenbesuch)
+. table page if visit==1 & calendar==1 & cal_st==0, stat(n verwdauer )  stat(mean verwdauer) stat(median verwdauer) stat(min verwdauer) stat(max verwdauer) nformat(%9.2f)
+{res}
+{smcl}
+{reset}{...}
+{hline 10}{c -}{c TT}{c -}{c -}{hline 28}{c -}{c -}{c -}{hline 6}{c -}{c -}{c -}{hline 6}{c -}{c -}{c -}{hline 13}{c -}{c -}{c -}{hline 13}
+{space 10} {c |}  Number of non-missing values   {space 2}Mean   Median   Minimum value   Maximum value
+{hline 10}{c -}{c +}{c -}{c -}{hline 28}{c -}{c -}{c -}{hline 6}{c -}{c -}{c -}{hline 6}{c -}{c -}{c -}{hline 13}{c -}{c -}{c -}{hline 13}
+page{space 6} {c |}  {space 28}   {space 6}   {space 6}   {space 13}   {space 13}
+  cal1{space 4} {c |}  {space 21}{result:1913.00}   {space 1}{result:75.75}   {space 1}{result:58.73}   {space 9}{result:1.30}   {space 6}{result:1640.85}
+  cal25{space 3} {c |}  {space 21}{result:4334.00}   {result:124.51}   {result:103.85}   {space 9}{result:1.87}   {space 6}{result:1499.51}
+  calendar {c |}  {space 22}{result:535.00}   {result:197.99}   {result:136.79}   {space 9}{result:2.71}   {space 6}{result:1682.46}
+  Total{space 3} {c |}  {space 21}{result:6782.00}   {result:116.55}   {space 1}{result:90.50}   {space 9}{result:1.30}   {space 6}{result:1682.46}
+{hline 10}{c -}{c BT}{c -}{c -}{hline 28}{c -}{c -}{c -}{hline 6}{c -}{c -}{c -}{hline 6}{c -}{c -}{c -}{hline 13}{c -}{c -}{c -}{hline 13}
+
+{com}. 
+. quiet: tabout page using "${c -(}out{c )-}slc_StuBe18W3W4_resTimeCalendar.xls" ///
+>         if visit==1 & cal_st==0, ///
+>         c(count verwdauer mean verwdauer p50 verwdauer min verwdauer max verwdauer) ///
+>         clab(N mean med min max) ///
+>         replace sum ///
+>         f(0 2 2) ///
+>         style(xlsx) ///
+>         font(bold) dpcomma
+{txt}
+{com}. 
+. 
+.         
+. *____________ T-Test (Kalendarium)
+. ttest verwdauer if visit==1 & ((page=="cal1" | page=="cal25") | page=="calendar"), by(wave)
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. err.{col 47}Std. dev.{col 59}[95% conf. interval]
+{hline 9}{c +}{hline 68}
+static c {c |}{res}{col 12}  6,249{col 22} 110.1188{col 34} 1.322199{col 46} 104.5206{col 58} 107.5268{col 70} 112.7108
+ {txt}dynamic {c |}{res}{col 12}    537{col 22} 203.9586{col 34} 10.12842{col 46} 234.7084{col 58} 184.0623{col 70} 223.8548
+{txt}{hline 9}{c +}{hline 68}
+Combined {c |}{res}{col 12}  6,786{col 22} 117.5447{col 34} 1.489405{col 46}  122.693{col 58}  114.625{col 70} 120.4644
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-93.83979{col 34} 5.398899{col 58}-104.4233{col 70}-83.25626
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}static c{txt}) - mean({res}dynamic{txt})                         t = {res}-17.3813
+{txt}H0: diff = 0                                     Degrees of freedom = {res}    6784
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}1.0000
+{txt}
+{com}. 
+. 
+. *____________ Box Plot: Bearbeitungszeit calendar page ___________
+. /// unterschieden nach: Kalendertyp; 
+> /// over: View und KalenderRange 
+> /// eingeschränkt: nur 2 Jahre, bei erstem Seitenbesuch
+> set scheme s1color
+{txt}
+{com}. graph hbox verwdauer if calendar==1 & visit==1 & calendarRange==2, ///
+>         over(mobile_view, label(labsize(vsmall))) ///
+>         by(wave) ///
+>         nooutsides ///
+>         box(1, fcolor("10 125 148") ///
+>         fintensity(inten100) ///
+>         lcolor(black) ///
+>         lwidth(vthin)) ///      
+>         /*title("Bearbeitungsdauer nach Ansicht", size(medium))*/ ///
+>         /*note("SLC Studienberechtigte 2018", size(vsmall)))*/ ///
+>         ytitle("response time of calendar page (minutes)", size(small)) ///
+>         ylabel( , labsize(vsmall))
+{res}{txt}
+{com}. 
+.         
+. graph save Graph "${c -(}out{c )-}ResponseTimeCalendar_nachAnsicht.gph", replace
+{res}{txt}file {bf:P:\Zofar\Schulze\esra23_calendar\out\ResponseTimeCalendar_nachAnsicht.gph} saved
+
+{com}. graph export "${c -(}out{c )-}ResponseTimeCalendar_nachAnsicht.svg", as(svg) replace
+{txt}{p 0 4 2}
+(file {bf}
+P:\Zofar\Schulze\esra23_calendar\out\ResponseTimeCalendar_nachAnsicht.svg{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+P:\Zofar\Schulze\esra23_calendar\out\ResponseTimeCalendar_nachAnsicht.svg{rm}
+saved as
+SVG
+format
+{p_end}
+
+{com}. 
+. /*
+> *____________ Box Plot: Bearbeitungszeit calendar page ___________
+> /// unterschieden nach: Kalendertyp; 
+> /// over: View und KalenderRange 
+> /// eingeschränkt: nur 2 Jahre, bei erstem Seitenbesuch
+> set scheme s1color
+> graph hbox verwdauer if calendar==1 & visit==1 , ///
+>         over(mobile_view, label(labsize(vsmall))) ///
+>         over(calendarRange) ///
+>         by(wave) ///
+>         nooutsides ///
+>         box(1, fcolor("10 125 148") ///
+>         fintensity(inten100) ///
+>         lcolor(black) ///
+>         lwidth(vthin)) ///      
+>         /*title("Bearbeitungsdauer nach Ansicht", size(medium))*/ ///
+>         /*note("SLC Studienberechtigte 2018", size(vsmall)))*/ ///
+>         ytitle("response time of calendar page (in minutes)", size(small)) ///
+>         ylabel( , labsize(vsmall))
+> graph export "P:\Zofar\Schulze\esra23_calendar\out\boxPlot_respTime_CalendarWaveView.png", as(png) name("Graph") replace
+> */
+. 
+. /*
+> set scheme s1color
+> graph hbox verwdauer if calendar==1 & visit==1, ///
+>         over(mobile_view, label(labsize(vsmall))) ///
+>         over(wave, label(labsize(vsmall))) ///
+>         nooutsides ///
+>         box(1, fcolor("10 125 148") ///
+>         fintensity(inten100) ///
+>         lcolor(black) ///
+>         lwidth(vthin)) ///
+>         /*title("Bearbeitungsdauer nach Ansicht", size(medium))*/ ///
+>         /*note("SLC Studienberechtigte 2018", size(vsmall)))*/ ///
+>         ytitle("response time of calendar page (in minutes)", size(small)) ///
+>         ylabel( , labsize(vsmall))
+>         
+>         
+> graph save Graph "${c -(}out{c )-}ResponseTimeCalendar_CaltypeAnsicht.gph", replace
+> graph export "${c -(}out{c )-}ResponseTimeCalendar_CaltypeAnsicht.png", as(png) replace
+> */
+. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}P:\Zofar\Schulze\esra23_calendar\log\log_responseTimeCalendar_2023-07-12.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}12 Jul 2023, 22:06:15
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
