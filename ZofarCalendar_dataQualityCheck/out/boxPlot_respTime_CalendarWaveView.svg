@@ -134,6 +134,6 @@
 	<text x="2752.70" y="2515.03" style="font-family:'Helvetica';font-size:67.94px;fill:#000000">excludes outside values</text>
 	<text x="1402.09" y="197.61" style="font-family:'Helvetica';font-size:67.94px;fill:#000000" text-anchor="middle">static calendar</text>
 	<text x="3281.23" y="197.61" style="font-family:'Helvetica';font-size:67.94px;fill:#000000" text-anchor="middle">dynamic calendar</text>
-	<text x="1979.88" y="2640.62" style="font-family:'Helvetica';font-size:79.94px;fill:#000000" text-anchor="middle">response time of calendar page (in minutes)</text>
-	<text x="118.06" y="2737.89" style="font-family:'Helvetica';font-size:79.94px;fill:#000000">Graphs by wave</text>
+	<text x="1980.00" y="2640.62" style="font-family:'Helvetica';font-size:79.94px;fill:#000000" text-anchor="middle">Response Time of Calendar (Minutes)</text>
+	<text x="118.06" y="2737.89" style="font-family:'Helvetica';font-size:79.94px;fill:#000000">Graphs by calendar type</text>
 </svg>

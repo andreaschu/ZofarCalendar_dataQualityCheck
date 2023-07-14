@@ -1,0 +1,198 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}P:\Zofar\Schulze\esra23_calendar\out\nls_responseTime.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}14 Jul 2023, 21:33:12
+{txt}
+{com}. 
+. 
+. keep if calendarRange==2 
+{txt}(524,858 observations deleted)
+
+{com}. keep if epiFinish==1 
+{txt}(26,230 observations deleted)
+
+{com}. 
+. 
+. *____________ Boxplot Bearbeitungsdauer nach Modul_________________________________
+. 
+. ** Labels für Module vorbereiten
+. 
+. cap drop wavestrng
+{txt}
+{com}. gen wavestrng=""
+{txt}(1,182,772 missing values generated)
+
+{com}. replace wavestrng="03" if wave==201803
+{txt}variable {bf}{res}wavestrng{sf}{txt} was {bf}{res}str1{sf}{txt} now {bf}{res}str2{sf}
+{txt}(637,953 real changes made)
+
+{com}. replace wavestrng="04" if wave==201804
+{txt}(544,819 real changes made)
+
+{com}. 
+. qui levelsof(wave)
+{txt}
+{com}. local wavelist `r(levels)'
+{txt}
+{com}. 
+. qui levelsof(modul)
+{txt}
+{com}. local levelslist `r(levels)'
+{txt}
+{com}. 
+. levelsof(wavestrng)
+{res}{txt}`"03"' `"04"'
+
+{com}. local wavelb `r(levels)'
+{txt}
+{com}. 
+. 
+. cap drop modul_labeled
+{txt}
+{com}. gen modul_labeled = ""
+{txt}(1,182,772 missing values generated)
+
+{com}. 
+. foreach modul_name in `"`levelslist'"' {c -(}
+{txt}  2{com}. foreach wave in `"`wavelb'"' {c -(}
+{txt}  3{com}.         qui levelsof pid if wavestrng=="`wave'" & modul =="`modul_name'" // Anzahl Befragte im Modul
+{txt}  4{com}.         local part_count : word count `r(levels)'
+{txt}  5{com}. 
+.         qui levelsof page if wavestrng=="`wave'" & modul =="`modul_name'"   // Anzahl pages pro Modul (aus den history-Daten)
+{txt}  6{com}.         local page_count : word count `r(levels)'
+{txt}  7{com}. 
+.         replace modul_labeled=`"`wave', `modul_name' (n=`part_count', pages: `page_count')"' if wavestrng=="`wave'" & modul ==`"`modul_name'"' /* &  epiFinish==1 & calendarRange==2*/
+{txt}  8{com}.         di `"`modul_name' `page_count' `part_count'"'
+{txt}  9{com}. {c )-}
+{txt} 10{com}. {c )-}
+{txt}variable {bf}{res}modul_labeled{sf}{txt} was {bf}{res}str1{sf}{txt} now {bf}{res}str36{sf}
+{txt}(338,915 real changes made)
+conventional 89 6066
+(257,490 real changes made)
+conventional 69 4999
+(299,038 real changes made)
+episodes 690 6066
+(287,329 real changes made)
+episodes 196 4999
+
+{com}. 
+. 
+. 
+. *____________ Box Plot: Bearbeitungszeit nach Modul (umfangreiche Labels) ______
+. /// over: Modul und View (Seiten pro Modul+Personen in Labels)
+> /// eingeschränkt: nur 2 Jahre, Episodenmodul beendet
+> 
+. table (wave modul) /*if epiFinish==1 & calendarRange==2 */, stat(freq) ///
+>         stat(mean moduldauer_minutes) ///
+>         stat(median moduldauer_minutes) ///
+>         stat(min moduldauer_minutes) ///
+>         stat(max moduldauer_minutes) ///
+>         nformat(%9.2f) nototals
+{res}
+{smcl}
+{reset}{...}
+{hline 18}{c -}{c TT}{c -}{c -}{hline 9}{c -}{c -}{c -}{hline 5}{c -}{c -}{c -}{hline 6}{c -}{c -}{c -}{hline 13}{c -}{c -}{c -}{hline 13}
+{space 18} {c |}  Frequency   {space 1}Mean   Median   Minimum value   Maximum value
+{hline 18}{c -}{c +}{c -}{c -}{hline 9}{c -}{c -}{c -}{hline 5}{c -}{c -}{c -}{hline 6}{c -}{c -}{c -}{hline 13}{c -}{c -}{c -}{hline 13}
+calendar type{space 5} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+  static calendar{space 1} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+    Fragenmodul{space 3} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+      conventional {c |}  {result:338915.00}   {result:27.03}   {space 1}{result:19.41}   {space 9}{result:1.53}   {space 7}{result:298.49}
+      episodes{space 4} {c |}  {result:299038.00}   {result:21.42}   {space 1}{result:15.92}   {space 9}{result:0.23}   {space 7}{result:306.88}
+  dynamic calendar {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+    Fragenmodul{space 3} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+      conventional {c |}  {result:257490.00}   {result:23.70}   {space 1}{result:15.28}   {space 9}{result:1.97}   {space 7}{result:339.54}
+      episodes{space 4} {c |}  {result:287329.00}   {result:23.48}   {space 1}{result:17.44}   {space 9}{result:0.69}   {space 7}{result:344.91}
+{hline 18}{c -}{c BT}{c -}{c -}{hline 9}{c -}{c -}{c -}{hline 5}{c -}{c -}{c -}{hline 6}{c -}{c -}{c -}{hline 13}{c -}{c -}{c -}{hline 13}
+
+{com}.         
+. set scheme s1color
+{txt}
+{com}. graph hbox moduldauer_minutes /*if epiFinish==1 & calendarRange==2 */, ///
+>         over(modul_labeled, label(labsize(small))) ///
+>         nooutsides ///
+>         box(1, fcolor("10 125 148") ///
+>         fintensity(inten100) ///
+>         lcolor(black) ///
+>         lwidth(vthin)) ///      
+>         ytitle("Response Time (Minutes)", size(small)) ///
+>         ylabel( , labsize(vsmall))
+{res}{txt}
+{com}. 
+. graph save Graph "${c -(}out{c )-}ResponseTime_nachModul_extLabel.gph", replace
+{res}{txt}file {bf:P:\Zofar\Schulze\esra23_calendar\out\ResponseTime_nachModul_extLabel.gph} saved
+
+{com}. graph export "${c -(}out{c )-}ResponseTime_nachModul_extLabel.svg", as(svg) replace
+{txt}{p 0 4 2}
+file {bf}
+P:\Zofar\Schulze\esra23_calendar\out\ResponseTime_nachModul_extLabel.svg{rm}
+saved as
+SVG
+format
+{p_end}
+
+{com}. 
+. 
+. *____________ Box Plot: Bearbeitungszeit nach Modul ___________
+. /// over: Modul und View
+> /// eingeschränkt: nur 2 Jahre, Episodenmodul beendet, keine SessionTimeout im jeweiligen Modul
+> table (wave modul) if /*epiFinish==1 & calendarRange==2  & */ modul_st==0, stat(freq) ///
+>         stat(mean moduldauer_minutes) ///
+>         stat(median moduldauer_minutes) ///
+>         stat(min moduldauer_minutes) ///
+>         stat(max moduldauer_minutes) ///
+>         nformat(%9.2f) nototals
+{res}
+{smcl}
+{reset}{...}
+{hline 18}{c -}{c TT}{c -}{c -}{hline 9}{c -}{c -}{c -}{hline 5}{c -}{c -}{c -}{hline 6}{c -}{c -}{c -}{hline 13}{c -}{c -}{c -}{hline 13}
+{space 18} {c |}  Frequency   {space 1}Mean   Median   Minimum value   Maximum value
+{hline 18}{c -}{c +}{c -}{c -}{hline 9}{c -}{c -}{c -}{hline 5}{c -}{c -}{c -}{hline 6}{c -}{c -}{c -}{hline 13}{c -}{c -}{c -}{hline 13}
+calendar type{space 5} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+  static calendar{space 1} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+    Fragenmodul{space 3} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+      conventional {c |}  {result:280088.00}   {result:20.65}   {space 1}{result:17.50}   {space 9}{result:1.53}   {space 7}{result:246.01}
+      episodes{space 4} {c |}  {result:251862.00}   {result:17.63}   {space 1}{result:15.32}   {space 9}{result:1.09}   {space 8}{result:91.53}
+  dynamic calendar {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+    Fragenmodul{space 3} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+      conventional {c |}  {result:201978.00}   {result:16.62}   {space 1}{result:13.78}   {space 9}{result:2.53}   {space 7}{result:162.95}
+      episodes{space 4} {c |}  {result:255600.00}   {result:18.52}   {space 1}{result:16.08}   {space 9}{result:0.69}   {space 7}{result:108.41}
+{hline 18}{c -}{c BT}{c -}{c -}{hline 9}{c -}{c -}{c -}{hline 5}{c -}{c -}{c -}{hline 6}{c -}{c -}{c -}{hline 13}{c -}{c -}{c -}{hline 13}
+
+{com}. 
+. 
+. set scheme s1color
+{txt}
+{com}. graph hbox moduldauer_minutes if /*epiFinish==1 & calendarRange==2 & */ modul_st==0, ///
+>         over(modul, label(labsize(small))) ///
+>         /// over(wave, label(labsize(small))) ///
+>         by(wave) ///
+>         subtitle(, size(small) color("black") nobox fcolor()) ///
+>         nooutsides ///
+>         box(1, fcolor("10 125 148") ///
+>         fintensity(inten100) ///
+>         lcolor(black) ///
+>         lwidth(vthin)) ///      
+>         ytitle("Response Time (Minutes)", size(small)) ///
+>         ylabel( , labsize(vsmall))      
+{res}{txt}
+{com}. 
+.         
+. graph save Graph "${c -(}out{c )-}ResponseTime_nachModul.gph", replace
+{res}{txt}file {bf:P:\Zofar\Schulze\esra23_calendar\out\ResponseTime_nachModul.gph} saved
+
+{com}. graph export "${c -(}out{c )-}ResponseTime_nachModul.svg", as(svg) replace
+{txt}{p 0 4 2}
+file {bf}
+P:\Zofar\Schulze\esra23_calendar\out\ResponseTime_nachModul.svg{rm}
+saved as
+SVG
+format
+{p_end}
+
+{com}. 
+. cap log close
+{smcl}
+{com}{sf}{ul off}
