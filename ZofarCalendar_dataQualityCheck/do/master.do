@@ -43,14 +43,17 @@ set maxvar 8000, perm
 do "${dodir}StuBe18W03W04_History_append.do"
 // out: history_2018w3bw4.dta
 
+
 *** [2.] History-Daten aufbereiten, mit Paradaten anreichern
 do "${dodir}StuBe18W03W04_History_pageNumModule.do"
 // out: history_2018w3bw4_enriched.dta 
+
 
 *** [3.] History-Daten reduzieren
 // eine Zeile pro Seite, pro Person
 do "${dodir}StuBe18W03W04_History_collapse.do"
 // out: history_2018w3bw4_collapsed.dta
+
 
 *** [4.] Auswertungen: Abbrüche und Antwortzeiten 
 do "${dodir}nls_respTime_breakoffs.do"
@@ -60,16 +63,19 @@ do "${dodir}nls_respTime_breakoffs.do"
 // out: ${out}slc_StuBe18W3_verwdauer.xls
 // out: ${out}slc_StuBe18W4_verwdauer.xls
 
+
 *** [5.] Auswertungen: Antwortzeiten nach Modul
 do "${dodir}nls_boxPlot_respTime.do"
 // use: ${datadir}history_2018w3bw4_enriched.dta
 // out: ${out}ResponseTime_nachModul.gph
 
+
 *** [6.] Auswertungen: Vergleich Antwortzeiten nach Wellen/ Kalendarien
 do "${dodir}nls_respTimeCalendar.do"
 // use:  ${datadir}history_2018w3bw4_enriched.dta
 
+
 *** [7.] Coefplot
-*do "${dodir}nls_coefplot.do"
+do "${dodir}nls_coefplot.do"
 // use:  ${datadir}history_2018w3bw4_enriched.dta
 
