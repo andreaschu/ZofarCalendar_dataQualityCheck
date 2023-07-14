@@ -6,26 +6,28 @@
 ****************************************************************************
 
 
-*************************************************************************
+
+*_________________________________________________________________
+** Do-File zur Reduzierung der Daten auf ein Fall pro Befragungsseite je Person**
+*_________________________________________________________________
+
+
 use "${datadir}history_2018w3bw4_enriched.dta", clear
 
 
 
 *_______überflüssige Variablen löschen_________
-drop id timestamp
+drop id timestamp panel_id preloadcohort_id
 
 
-
-*************************************************************************
-****** Datensatz umwandeln in ein breites Format mit aggregierten Daten **
 
 *________Datensatz aggregieren____________________
-// Datensatz reduzieren auf eine Zeile pro Befragten und Fragebogenseite
-// !Achtung: bei mehrmaligem Laden einer Seite wird der Verbleib summiert!
+** Marker setzen für Seiten, die keine Verweildauer haben (weil es die letzte Befragungsseite ist)
 bysort pid page: gen allmiss=mi(verwdauer)
 
-*** Datensatz reduzieren
 
+** Datensatz reduzieren auf eine Zeile pro Befragten und Fragebogenseite
+// !Achtung: bei mehrmaligem Laden einer Seite wird der Verbleib summiert!
 collapse (sum) verwdauer (first) token pagenum  modul wave participant_id     ///
 		seiteneing (max) allmiss visit (mean) maxpage lastpage, ///
 		by(pid page)

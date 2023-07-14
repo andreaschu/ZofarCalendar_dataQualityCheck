@@ -66,16 +66,15 @@ foreach t of numlist 1/500 {
 	quiet: drop if token=="tester`t'" | token=="part`t'"
 }
 
+
 *____________label wave ____________________
 *label define wavelb 201803 "2018, 3. Welle" 201804 "2018, 4. Welle"
 label define wavelb 201803 "static calendar" 201804 "dynamic calendar"
 label val wave wavelb
+label var wave "calendar type"
 
 
 ************************************************************************
-*** save appended data
+*** save merged data
 save "${datadir}history_2018w3bw4.dta", replace
-
 ************************************************************************
-*** NOTES:
-* possibly merge instead of append or reshape wide (by wave)

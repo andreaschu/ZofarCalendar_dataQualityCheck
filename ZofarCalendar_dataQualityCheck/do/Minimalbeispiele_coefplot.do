@@ -20,4 +20,8 @@ gen b = exp(5+1*mobile+2*cal+3*mobile*cal+rnormal(0,1))/(1+exp(5+1*mobile+2*cal+
 
 logit 		b i.cal##i.mobile
 margins		, at(cal=(0 1) mobile=(0 1)) post
-coefplot	,groups("non-mobile" "mobile" = "static calendar" " non-mobile " " mobile " = "dynamic calendar", nogap)  rename(1._at="non-mobile" 2._at="mobile" 3._at=" non-mobile " 4._at=" mobile ") ciopts(recast(rcap)) vertical ytitle("Predicted Probability: Break-Off") 
+forvalues grp= 1 / 4 { 
+coefplot	, groups("non-mobile" "mobile" = "static calendar" " non-mobile " " mobile " = "dynamic calendar", nogap)  rename(1._at="non-mobile" 2._at="mobile" 3._at=" non-mobile " 4._at=" mobile ") ciopts(recast(rcap)) vertical ytitle("Predicted Probability: Break-Off") ///
+yscale(range( -`grp' `=6+`grp''))
+
+}

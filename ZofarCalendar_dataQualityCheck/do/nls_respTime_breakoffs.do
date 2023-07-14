@@ -1,25 +1,20 @@
-****************************************************************************
-** Project:			Talk, ESRA23
-** date:			2023-06-20
-** used data sets:	history_2018w3bw4_collapsed.dta
-** created by:		Schulze, Andrea
-****************************************************************************
-
-version 17
 
 *cd "${workdir}log"
 *cap log close
+*log using log_breakoffsRepsonseTime_`: di %tdCY-N-D daily("$S_DATE", "DMY")', append
+
+
+use "${datadir}history_2018w3bw4_collapsed.dta", clear
+
 
 *************************************************************************
-use "${datadir}history_2018w3bw4_collapsed.dta", clear
-*************************************************************************
-*************************************************************************
-****** Indikatoren berechnen ******
+****************** Indikatoren berechnen ********************
 
 
 *________Anzahl der Besucher pro Seite___________
 bysort wave pagenum: gen visitor= _N
 label var visitor "Anzahl der Besucher pro Seite (ohne doppelte Besuche)"
+
 
 *________Anzahl der Abbrecher pro Seite___________
 bysort wave pagenum lastpage: egen abbrecher= count(participant_id) if pagenum==lastpage
@@ -28,39 +23,26 @@ label var abbrecher "Anzahl der Abbrecher pro Seite (mit lastpage)"
 bysort wave pagenum: egen dropout= max(abbrecher)
 label var dropout "Anzahl der Abbrecher pro Seite (mit lastpage) [Konstante]"
 
+
 *________Abbruchquote_____________________________
 bysort wave pagenum: gen dropoutrate= dropout/visitor
 label var dropoutrate "Abbruchquote (Anz. Abbrecher im Verhältn. zu Seitenbesucher)"
 
+
 *________Anzahl der besuchten Seiten pro Befragten___________
 bysort pid: gen anzseiten= _N 
 label var anzseiten "Anzahl der besuchten Seiten pro Befragten"
-
-*________Durchschnittliche Bearbeitungsdauer___________
-bysort wave: egen dauer_mn=mean(verwdauer)
-label var dauer_mn "Verweildauer: arithmetisches Mittel"
-
-bysort wave: egen dauer_med=median(verwdauer)
-label var dauer_med "Verweildauer: Median"
-
-bysort wave: egen dauer_min=min(verwdauer)
-label var dauer_min "Verweildauer: Minimum"
-
-bysort wave: egen dauer_max=max(verwdauer)
-label var dauer_max "Verweildauer: Maximum"
-
-bysort wave: egen dauer_sd=sd(verwdauer)
-label var dauer_sd "Verweildauer: Standardabweichung"
 
 
 *_______________________________________________________________
 cap log close
 
 
+
 log using "${out}StuBe18W3W4_abbrecher-verwdauer_2023-07-12.smcl", replace
 
 *******************************************************************************
-********************* Auswertungen Abbrüche und Verweildauern **********************
+****************** Auswertungen Abbrüche und Verweildauern ********************
 
 *________Anzahl der Abbrecher pro Seite___________
 // table page, contents(n abbrecher mean dropoutrate n dropoutrate) format(%9.4f)
