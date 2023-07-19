@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}P:\Zofar\Schulze\esra23_calendar\out\nls_responseTime.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}14 Jul 2023, 21:33:12
+ {txt}opened on:  {res}18 Jul 2023, 20:10:27
 {txt}
 {com}. 
 . 
@@ -135,10 +135,21 @@ format
 
 {com}. 
 . 
-. *____________ Box Plot: Bearbeitungszeit nach Modul ___________
+. 
+. *____________ Datensatz reduzieren ______
+. // zwei Zeilen pro Wellenteilnehmer (person +m odul)
+. keep moduldauer_minutes modul_st token wave pid modul mobile_view
+{txt}
+{com}. collapse (first) moduldauer_minutes modul_st token mobile_view, by(pid modul wave)
+{res}{txt}
+{com}. cap label val mobile_view mobil_lb 
+{txt}
+{com}. 
+. 
+. *____________ Box Plot: Bearbeitungszeit nach Modul & Bildschirmgröße___________
 . /// over: Modul und View
 > /// eingeschränkt: nur 2 Jahre, Episodenmodul beendet, keine SessionTimeout im jeweiligen Modul
-> table (wave modul) if /*epiFinish==1 & calendarRange==2  & */ modul_st==0, stat(freq) ///
+> table (wave modul mobile_view) if /*epiFinish==1 & calendarRange==2  & */ modul_st==0, stat(freq) ///
 >         stat(mean moduldauer_minutes) ///
 >         stat(median moduldauer_minutes) ///
 >         stat(min moduldauer_minutes) ///
@@ -147,26 +158,49 @@ format
 {res}
 {smcl}
 {reset}{...}
-{hline 18}{c -}{c TT}{c -}{c -}{hline 9}{c -}{c -}{c -}{hline 5}{c -}{c -}{c -}{hline 6}{c -}{c -}{c -}{hline 13}{c -}{c -}{c -}{hline 13}
-{space 18} {c |}  Frequency   {space 1}Mean   Median   Minimum value   Maximum value
-{hline 18}{c -}{c +}{c -}{c -}{hline 9}{c -}{c -}{c -}{hline 5}{c -}{c -}{c -}{hline 6}{c -}{c -}{c -}{hline 13}{c -}{c -}{c -}{hline 13}
-calendar type{space 5} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
-  static calendar{space 1} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
-    Fragenmodul{space 3} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
-      conventional {c |}  {result:280088.00}   {result:20.65}   {space 1}{result:17.50}   {space 9}{result:1.53}   {space 7}{result:246.01}
-      episodes{space 4} {c |}  {result:251862.00}   {result:17.63}   {space 1}{result:15.32}   {space 9}{result:1.09}   {space 8}{result:91.53}
-  dynamic calendar {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
-    Fragenmodul{space 3} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
-      conventional {c |}  {result:201978.00}   {result:16.62}   {space 1}{result:13.78}   {space 9}{result:2.53}   {space 7}{result:162.95}
-      episodes{space 4} {c |}  {result:255600.00}   {result:18.52}   {space 1}{result:16.08}   {space 9}{result:0.69}   {space 7}{result:108.41}
-{hline 18}{c -}{c BT}{c -}{c -}{hline 9}{c -}{c -}{c -}{hline 5}{c -}{c -}{c -}{hline 6}{c -}{c -}{c -}{hline 13}{c -}{c -}{c -}{hline 13}
+{hline 27}{c -}{c TT}{c -}{c -}{hline 9}{c -}{c -}{c -}{hline 5}{c -}{c -}{c -}{hline 6}{c -}{c -}{c -}{hline 13}{c -}{c -}{c -}{hline 13}
+{space 27} {c |}  Frequency   {space 1}Mean   Median   Minimum value   Maximum value
+{hline 27}{c -}{c +}{c -}{c -}{hline 9}{c -}{c -}{c -}{hline 5}{c -}{c -}{c -}{hline 6}{c -}{c -}{c -}{hline 13}{c -}{c -}{c -}{hline 13}
+calendar type{space 14} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+  static calendar{space 10} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+    Fragenmodul{space 12} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+      conventional{space 9} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+        (first) mobile_view {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+          non-mobile{space 7} {c |}  {space 2}{result:2449.00}   {result:21.18}   {space 1}{result:18.11}   {space 9}{result:1.76}   {space 7}{result:246.01}
+          mobile{space 11} {c |}  {space 2}{result:2605.00}   {result:16.09}   {space 1}{result:14.33}   {space 9}{result:1.53}   {space 7}{result:152.59}
+      episodes{space 13} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+        (first) mobile_view {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+          non-mobile{space 7} {c |}  {space 2}{result:2601.00}   {result:15.32}   {space 1}{result:13.51}   {space 9}{result:1.09}   {space 8}{result:90.06}
+          mobile{space 11} {c |}  {space 2}{result:2379.00}   {result:13.45}   {space 1}{result:11.47}   {space 9}{result:1.21}   {space 8}{result:91.53}
+  dynamic calendar{space 9} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+    Fragenmodul{space 12} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+      conventional{space 9} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+        (first) mobile_view {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+          non-mobile{space 7} {c |}  {space 2}{result:1941.00}   {result:16.85}   {space 1}{result:14.17}   {space 9}{result:3.47}   {space 7}{result:162.95}
+          mobile{space 11} {c |}  {space 2}{result:1949.00}   {result:15.44}   {space 1}{result:12.85}   {space 9}{result:2.53}   {space 8}{result:90.24}
+      episodes{space 13} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+        (first) mobile_view {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+          non-mobile{space 7} {c |}  {space 2}{result:2277.00}   {result:15.37}   {space 1}{result:13.13}   {space 9}{result:0.90}   {space 7}{result:108.41}
+          mobile{space 11} {c |}  {space 2}{result:2310.00}   {result:13.85}   {space 1}{result:12.00}   {space 9}{result:0.69}   {space 8}{result:71.38}
+{hline 27}{c -}{c BT}{c -}{c -}{hline 9}{c -}{c -}{c -}{hline 5}{c -}{c -}{c -}{hline 6}{c -}{c -}{c -}{hline 13}{c -}{c -}{c -}{hline 13}
 
 {com}. 
+. quiet: tabout modul wave mobile_view using "${c -(}out{c )-}nls_respTimeModule.xls" if modul_st==0, ///
+>         c(count wave mean moduldauer_minutes ) ///
+>         clab(N repsTimePerModule ) ///
+>         replace sum ///
+>         f(0 4 0) ///
+>         style(xlsx) ///
+>         font(bold) dpcomma
+{txt}
+{com}. 
+. 
 . 
 . set scheme s1color
 {txt}
 {com}. graph hbox moduldauer_minutes if /*epiFinish==1 & calendarRange==2 & */ modul_st==0, ///
 >         over(modul, label(labsize(small))) ///
+>         over(mobile_view, label(labsize(vsmall))) ///
 >         /// over(wave, label(labsize(small))) ///
 >         by(wave) ///
 >         subtitle(, size(small) color("black") nobox fcolor()) ///
@@ -193,6 +227,66 @@ format
 {p_end}
 
 {com}. 
+. 
+. 
+. *____________ Box Plot: Bearbeitungszeit nach Modul & Bildschirmgröße___________
+. /// over: View
+> /// eingeschränkt: nur 2 Jahre, nur Episodenmodul,
+> ///                     Episodenmodul beendet, keine SessionTimeout im Modul
+> table (wave mobile_view) if /*epiFinish==1 & calendarRange==2  & */ modul=="episodes" & modul_st==0, stat(freq) ///
+>         stat(mean moduldauer_minutes) ///
+>         stat(median moduldauer_minutes) ///
+>         stat(min moduldauer_minutes) ///
+>         stat(max moduldauer_minutes) ///
+>         nformat(%9.2f) nototals
+{res}
+{smcl}
+{reset}{...}
+{hline 23}{c -}{c TT}{c -}{c -}{hline 9}{c -}{c -}{c -}{hline 5}{c -}{c -}{c -}{hline 6}{c -}{c -}{c -}{hline 13}{c -}{c -}{c -}{hline 13}
+{space 23} {c |}  Frequency   {space 1}Mean   Median   Minimum value   Maximum value
+{hline 23}{c -}{c +}{c -}{c -}{hline 9}{c -}{c -}{c -}{hline 5}{c -}{c -}{c -}{hline 6}{c -}{c -}{c -}{hline 13}{c -}{c -}{c -}{hline 13}
+calendar type{space 10} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+  static calendar{space 6} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+    (first) mobile_view {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+      non-mobile{space 7} {c |}  {space 2}{result:2601.00}   {result:15.32}   {space 1}{result:13.51}   {space 9}{result:1.09}   {space 8}{result:90.06}
+      mobile{space 11} {c |}  {space 2}{result:2379.00}   {result:13.45}   {space 1}{result:11.47}   {space 9}{result:1.21}   {space 8}{result:91.53}
+  dynamic calendar{space 5} {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+    (first) mobile_view {c |}  {space 9}   {space 5}   {space 6}   {space 13}   {space 13}
+      non-mobile{space 7} {c |}  {space 2}{result:2277.00}   {result:15.37}   {space 1}{result:13.13}   {space 9}{result:0.90}   {space 7}{result:108.41}
+      mobile{space 11} {c |}  {space 2}{result:2310.00}   {result:13.85}   {space 1}{result:12.00}   {space 9}{result:0.69}   {space 8}{result:71.38}
+{hline 23}{c -}{c BT}{c -}{c -}{hline 9}{c -}{c -}{c -}{hline 5}{c -}{c -}{c -}{hline 6}{c -}{c -}{c -}{hline 13}{c -}{c -}{c -}{hline 13}
+
+{com}.         
+. 
+. graph hbox moduldauer_minutes if /*epiFinish==1 & calendarRange==2 & */ modul=="episodes" & modul_st==0, ///
+>         /// over(modul, label(labsize(small))) ///
+>         over(mobile_view, label(labsize(vsmall))) ///
+>         /// over(wave, label(labsize(small))) ///
+>         by(wave) ///
+>         subtitle(, size(small) color("black") nobox fcolor()) ///
+>         nooutsides ///
+>         box(1, fcolor("10 125 148") ///
+>         fintensity(inten100) ///
+>         lcolor(black) ///
+>         lwidth(vthin)) ///      
+>         ytitle("Response Time (Minutes)", size(small)) ///
+>         ylabel( , labsize(vsmall))      
+{res}{txt}
+{com}. 
+. graph save Graph "${c -(}out{c )-}ResponseTime_Episodes_nachView.gph", replace
+{res}{txt}file {bf:P:\Zofar\Schulze\esra23_calendar\out\ResponseTime_Episodes_nachView.gph} saved
+
+{com}. graph export "${c -(}out{c )-}ResponseTime_Episodes_nachView.svg", as(svg) replace
+{txt}{p 0 4 2}
+file {bf}
+P:\Zofar\Schulze\esra23_calendar\out\ResponseTime_Episodes_nachView.svg{rm}
+saved as
+SVG
+format
+{p_end}
+
+{com}. 
+. 
 . cap log close
 {smcl}
 {com}{sf}{ul off}

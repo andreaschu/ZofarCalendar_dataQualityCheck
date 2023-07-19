@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}P:\Zofar\Schulze\esra23_calendar\out\nls_coefPlots.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}14 Jul 2023, 21:34:37
+ {txt}opened on:  {res}18 Jul 2023, 20:11:33
 {txt}
 {com}. 
 . *_________________________________________________________________
@@ -14,6 +14,21 @@
 . use "${c -(}datadir{c )-}history_2018w3bw4_enriched.dta", clear
 {txt}
 {com}. 
+. *_________________________________________________________________
+. // Datensatz reduzieren auf eine Zeile pro Person, pro Welle
+. 
+. 
+.  keep if calendarRange==2
+{txt}(524,858 observations deleted)
+
+{com}.  keep if epiStart==1
+{txt}(7,251 observations deleted)
+
+{com}.  keep(mobile_view epiBreakoff wave token part_id verwdauer calendar pid finished epiFinish modul visit calendarRange)
+{txt}
+{com}. 
+. 
+. 
 . 
 . set scheme s2color
 {txt}
@@ -25,34 +40,35 @@
 . // nur Fälle mit Kalenderzeitraum von 2 Jahren 
 . 
 . 
-. reg             verwdauer i.wave##i.mobile_view if calendar==1 & visit==1 & calendarRange==2 
+. reg             verwdauer i.wave##i.mobile_view if calendar==1 & visit==1 & calendarRange==2, vce(cluster part_id) 
 
-{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}     4,593
-{txt}{hline 13}{c +}{hline 34}   F(3, 4589)      = {res}    20.54
-{txt}       Model {c |} {res} 799713.986         3  266571.329   {txt}Prob > F        ={res}    0.0000
-{txt}    Residual {c |} {res} 59564022.4     4,589   12979.739   {txt}R-squared       ={res}    0.0132
-{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0126
-{txt}       Total {c |} {res} 60363736.4     4,592   13145.413   {txt}Root MSE        =   {res} 113.93
+{txt}Linear regression                               Number of obs     = {res}     4,593
+                                                {txt}F(3, 4456)        =  {res}     8.34
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0132
+                                                {txt}Root MSE          =    {res} 113.93
 
-{txt}{hline 25}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
-{col 1}               verwdauer{col 26}{c |} Coefficient{col 38}  Std. err.{col 50}      t{col 58}   P>|t|{col 66}     [95% con{col 79}f. interval]
+{txt}{ralign 90:(Std. err. adjusted for {res:4,457} clusters in {res:part_id})}
+{hline 25}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 26}{c |}{col 38}    Robust
+{col 1}               verwdauer{col 26}{c |} Coefficient{col 38}  std. err.{col 50}      t{col 58}   P>|t|{col 66}     [95% con{col 79}f. interval]
 {hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
 {space 20}wave {c |}
-{space 7}dynamic calendar  {c |}{col 26}{res}{space 2}   81.928{col 38}{space 2} 13.73651{col 49}{space 1}    5.96{col 58}{space 3}0.000{col 66}{space 4} 54.99783{col 79}{space 3} 108.8582
+{space 7}dynamic calendar  {c |}{col 26}{res}{space 2}   81.928{col 38}{space 2} 24.48429{col 49}{space 1}    3.35{col 58}{space 3}0.001{col 66}{space 4} 33.92664{col 79}{space 3} 129.9294
 {txt}{space 24} {c |}
 {space 13}mobile_view {c |}
-{space 17}mobile  {c |}{col 26}{res}{space 2}-4.491458{col 38}{space 2} 3.460926{col 49}{space 1}   -1.30{col 58}{space 3}0.194{col 66}{space 4}-11.27654{col 79}{space 3} 2.293621
+{space 17}mobile  {c |}{col 26}{res}{space 2}-4.491458{col 38}{space 2} 3.314029{col 49}{space 1}   -1.36{col 58}{space 3}0.175{col 66}{space 4} -10.9886{col 79}{space 3} 2.005684
 {txt}{space 24} {c |}
 {space 8}wave#mobile_view {c |}
-dynamic calendar#mobile  {c |}{col 26}{res}{space 2} -38.4365{col 38}{space 2} 16.26575{col 49}{space 1}   -2.36{col 58}{space 3}0.018{col 66}{space 4}-70.32521{col 79}{space 3}-6.547798
+dynamic calendar#mobile  {c |}{col 26}{res}{space 2} -38.4365{col 38}{space 2} 27.39941{col 49}{space 1}   -1.40{col 58}{space 3}0.161{col 66}{space 4}-92.15294{col 79}{space 3} 15.27994
 {txt}{space 24} {c |}
-{space 19}_cons {c |}{col 26}{res}{space 2} 127.4845{col 38}{space 2} 2.424563{col 49}{space 1}   52.58{col 58}{space 3}0.000{col 66}{space 4} 122.7312{col 79}{space 3} 132.2378
+{space 19}_cons {c |}{col 26}{res}{space 2} 127.4845{col 38}{space 2} 2.295249{col 49}{space 1}   55.54{col 58}{space 3}0.000{col 66}{space 4} 122.9847{col 79}{space 3} 131.9843
 {txt}{hline 25}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
 {res}{txt}
 {com}. margins         , at(wave=(201803 201804) mobile_view=(0 1)) post
 {res}
 {txt}{col 1}Adjusted predictions{col 58}{lalign 13:Number of obs}{col 71} = {res}{ralign 5:4,593}
-{txt}{col 1}Model VCE: {res:OLS}
+{txt}{col 1}Model VCE: {res:Robust}
 
 {txt}{p2colset 1 13 13 2}{...}
 {p2col:Expression:}{res:Linear prediction, predict()}{p_end}
@@ -71,10 +87,10 @@ dynamic calendar#mobile  {c |}{col 26}{res}{space 2} -38.4365{col 38}{space 2} 1
 {col 14}{c |}     Margin{col 26}   std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
 {hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
 {space 9}_at {c |}
-{space 10}1  {c |}{col 14}{res}{space 2} 127.4845{col 26}{space 2} 2.424563{col 37}{space 1}   52.58{col 46}{space 3}0.000{col 54}{space 4} 122.7312{col 67}{space 3} 132.2378
-{txt}{space 10}2  {c |}{col 14}{res}{space 2}  122.993{col 26}{space 2} 2.469717{col 37}{space 1}   49.80{col 46}{space 3}0.000{col 54}{space 4} 118.1512{col 67}{space 3} 127.8349
-{txt}{space 10}3  {c |}{col 14}{res}{space 2} 209.4125{col 26}{space 2} 13.52084{col 37}{space 1}   15.49{col 46}{space 3}0.000{col 54}{space 4} 182.9051{col 67}{space 3} 235.9199
-{txt}{space 10}4  {c |}{col 14}{res}{space 2} 166.4845{col 26}{space 2} 8.353654{col 37}{space 1}   19.93{col 46}{space 3}0.000{col 54}{space 4} 150.1074{col 67}{space 3} 182.8617
+{space 10}1  {c |}{col 14}{res}{space 2} 127.4845{col 26}{space 2} 2.295249{col 37}{space 1}   55.54{col 46}{space 3}0.000{col 54}{space 4} 122.9847{col 67}{space 3} 131.9843
+{txt}{space 10}2  {c |}{col 14}{res}{space 2}  122.993{col 26}{space 2} 2.390527{col 37}{space 1}   51.45{col 46}{space 3}0.000{col 54}{space 4} 118.3064{col 67}{space 3} 127.6797
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} 209.4125{col 26}{space 2} 24.44035{col 37}{space 1}    8.57{col 46}{space 3}0.000{col 54}{space 4} 161.4973{col 67}{space 3} 257.3277
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} 166.4845{col 26}{space 2} 12.07404{col 37}{space 1}   13.79{col 46}{space 3}0.000{col 54}{space 4} 142.8134{col 67}{space 3} 190.1557
 {txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
 {res}{txt}
 {com}. coefplot        , groups("non-mobile" "mobile" = "static calendar" " non-mobile " " mobile " = "dynamic calendar", nogap labsize(small)) ///
@@ -105,67 +121,55 @@ format
 {com}. 
 . 
 . 
-. preserve 
-{txt}
-{com}. *_________________________________________________________________
-. // Datensatz reduzieren auf eine Zeile pro Person, pro Welle
-. 
-. 
-.  keep if calendarRange==2
-{txt}(524,858 observations deleted)
-
-{com}.  keep if epiStart==1
-{txt}(7,251 observations deleted)
-
-{com}.  keep(mobile_view epiBreakoff wave token  pid finished epiFinish modul)
-{txt}
-{com}.  
+.  
 .  
 .  *keep(mobile_view epiBreakoff wave token  pid finished epiFinish modul calendarRange epiStart)
 . 
-. collapse (mean) mobile_view epiBreakoff finished epiFinish (first) pid, by(token wave modul)
+. 
+. collapse (mean) mobile_view epiBreakoff finished epiFinish (first) pid part_id, by(token wave)
 {res}{txt}
 {com}. 
-. 
 . *_________________________________________________________________
 . *____________ Coefplot: Abbrüche im Episodenmodul ________
 . // nur Personen, die im Episodemodul gestartet sind (epiStart==1)
 . // nur Fälle mit Kalenderzeitraum von 2 Jahren 
 . 
 . *logit epiBreakoff i.wave##i.mobile_view if epiStart==1 & calendarRange==2
-. logit epiBreakoff i.wave##i.mobile_view
+. logit epiBreakoff i.wave##i.mobile_view, vce(cluster part_id)
 
-{res}{txt}Iteration 0:{space 3}log likelihood = {res: -4555.632}  
-Iteration 1:{space 3}log likelihood = {res:-4239.6108}  
-Iteration 2:{space 3}log likelihood = {res:-4074.4657}  
-Iteration 3:{space 3}log likelihood = {res:-4069.6201}  
-Iteration 4:{space 3}log likelihood = {res:-4069.5454}  
-Iteration 5:{space 3}log likelihood = {res:-4069.5454}  
+{res}{txt}Iteration 0:{space 3}log pseudolikelihood = {res: -2277.816}  
+Iteration 1:{space 3}log pseudolikelihood = {res:-2119.8054}  
+Iteration 2:{space 3}log pseudolikelihood = {res:-2037.2329}  
+Iteration 3:{space 3}log pseudolikelihood = {res:-2034.8101}  
+Iteration 4:{space 3}log pseudolikelihood = {res:-2034.7727}  
+Iteration 5:{space 3}log pseudolikelihood = {res:-2034.7727}  
 {res}
-{txt}{col 1}Logistic regression{col 57}{lalign 13:Number of obs}{col 70} = {res}{ralign 6:23,264}
-{txt}{col 57}{lalign 13:LR chi2({res:3})}{col 70} = {res}{ralign 6:972.17}
+{txt}{col 1}Logistic regression{col 57}{lalign 13:Number of obs}{col 70} = {res}{ralign 6:11,632}
+{txt}{col 57}{lalign 13:Wald chi2({res:3})}{col 70} = {res}{ralign 6:328.86}
 {txt}{col 57}{lalign 13:Prob > chi2}{col 70} = {res}{ralign 6:0.0000}
-{txt}{col 1}{lalign 14:Log likelihood}{col 15} = {res}{ralign 10:-4069.5454}{txt}{col 57}{lalign 13:Pseudo R2}{col 70} = {res}{ralign 6:0.1067}
+{txt}{col 1}{lalign 20:Log pseudolikelihood}{col 21} = {res}{ralign 10:-2034.7727}{txt}{col 57}{lalign 13:Pseudo R2}{col 70} = {res}{ralign 6:0.1067}
 
-{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
-{col 1}       epiBreakoffs{col 21}{c |} Coefficient{col 33}  Std. err.{col 45}      z{col 53}   P>|z|{col 61}     [95% con{col 74}f. interval]
+{txt}{ralign 85:(Std. err. adjusted for {res:7,881} clusters in {res:part_id})}
+{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}       epiBreakoffs{col 21}{c |} Coefficient{col 33}  std. err.{col 45}      z{col 53}   P>|z|{col 61}     [95% con{col 74}f. interval]
 {hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
 {space 15}wave {c |}
-{space 2}dynamic calendar  {c |}{col 21}{res}{space 2} 2.397038{col 33}{space 2} .2075341{col 44}{space 1}   11.55{col 53}{space 3}0.000{col 61}{space 4} 1.990279{col 74}{space 3} 2.803797
+{space 2}dynamic calendar  {c |}{col 21}{res}{space 2} 2.397038{col 33}{space 2} .2936225{col 44}{space 1}    8.16{col 53}{space 3}0.000{col 61}{space 4} 1.821548{col 74}{space 3} 2.972528
 {txt}{space 19} {c |}
-{space 6}1.mobile_view {c |}{col 21}{res}{space 2} 1.864003{col 33}{space 2} .2110419{col 44}{space 1}    8.83{col 53}{space 3}0.000{col 61}{space 4} 1.450368{col 74}{space 3} 2.277637
+{space 6}1.mobile_view {c |}{col 21}{res}{space 2} 1.864003{col 33}{space 2} .2984773{col 44}{space 1}    6.25{col 53}{space 3}0.000{col 61}{space 4} 1.278998{col 74}{space 3} 2.449008
 {txt}{space 19} {c |}
 {space 3}wave#mobile_view {c |}
-dynamic calendar#1  {c |}{col 21}{res}{space 2}-.8022295{col 33}{space 2}  .224928{col 44}{space 1}   -3.57{col 53}{space 3}0.000{col 61}{space 4} -1.24308{col 74}{space 3}-.3613787
+dynamic calendar#1  {c |}{col 21}{res}{space 2}-.8022295{col 33}{space 2} .3191646{col 44}{space 1}   -2.51{col 53}{space 3}0.012{col 61}{space 4}-1.427781{col 74}{space 3}-.1766784
 {txt}{space 19} {c |}
-{space 14}_cons {c |}{col 21}{res}{space 2} -5.43305{col 33}{space 2} .1965441{col 44}{space 1}  -27.64{col 53}{space 3}0.000{col 61}{space 4}-5.818269{col 74}{space 3} -5.04783
+{space 14}_cons {c |}{col 21}{res}{space 2} -5.43305{col 33}{space 2}  .277973{col 44}{space 1}  -19.55{col 53}{space 3}0.000{col 61}{space 4}-5.977867{col 74}{space 3}-4.888233
 {txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
 
 {com}. 
 . margins,        at(wave=(201803 201804) mobile_view=(0 1)) post
 {res}
-{txt}{col 1}Adjusted predictions{col 57}{lalign 13:Number of obs}{col 70} = {res}{ralign 6:23,264}
-{txt}{col 1}Model VCE: {res:OIM}
+{txt}{col 1}Adjusted predictions{col 57}{lalign 13:Number of obs}{col 70} = {res}{ralign 6:11,632}
+{txt}{col 1}Model VCE: {res:Robust}
 
 {txt}{p2colset 1 13 13 2}{...}
 {p2col:Expression:}{res:Pr(epiBreakoffs), predict()}{p_end}
@@ -184,10 +188,10 @@ dynamic calendar#1  {c |}{col 21}{res}{space 2}-.8022295{col 33}{space 2}  .2249
 {col 14}{c |}     Margin{col 26}   std. err.{col 38}      z{col 46}   P>|z|{col 54}     [95% con{col 67}f. interval]
 {hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
 {space 9}_at {c |}
-{space 10}1  {c |}{col 14}{res}{space 2} .0043507{col 26}{space 2} .0008514{col 37}{space 1}    5.11{col 46}{space 3}0.000{col 54}{space 4}  .002682{col 67}{space 3} .0060194
-{txt}{space 10}2  {c |}{col 14}{res}{space 2} .0274102{col 26}{space 2} .0020493{col 37}{space 1}   13.38{col 46}{space 3}0.000{col 54}{space 4} .0233937{col 67}{space 3} .0314267
-{txt}{space 10}3  {c |}{col 14}{res}{space 2} .0458252{col 26}{space 2} .0029138{col 37}{space 1}   15.73{col 46}{space 3}0.000{col 54}{space 4} .0401143{col 67}{space 3} .0515362
-{txt}{space 10}4  {c |}{col 14}{res}{space 2} .1219344{col 26}{space 2} .0043002{col 37}{space 1}   28.36{col 46}{space 3}0.000{col 54}{space 4} .1135062{col 67}{space 3} .1303626
+{space 10}1  {c |}{col 14}{res}{space 2} .0043507{col 26}{space 2} .0012041{col 37}{space 1}    3.61{col 46}{space 3}0.000{col 54}{space 4} .0019907{col 67}{space 3} .0067108
+{txt}{space 10}2  {c |}{col 14}{res}{space 2} .0274102{col 26}{space 2} .0028983{col 37}{space 1}    9.46{col 46}{space 3}0.000{col 54}{space 4} .0217296{col 67}{space 3} .0330908
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .0458252{col 26}{space 2}  .004121{col 37}{space 1}   11.12{col 46}{space 3}0.000{col 54}{space 4} .0377482{col 67}{space 3} .0539023
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .1219344{col 26}{space 2} .0060818{col 37}{space 1}   20.05{col 46}{space 3}0.000{col 54}{space 4} .1100143{col 67}{space 3} .1338544
 {txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
 {res}{txt}
 {com}. coefplot        ,groups("non-mobile" "mobile" = "static calendar" " non-mobile " " mobile " = "dynamic calendar", nogap labsize(small)) ///
