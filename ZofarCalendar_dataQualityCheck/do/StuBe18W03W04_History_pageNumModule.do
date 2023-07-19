@@ -146,6 +146,12 @@ foreach t of numlist 1/200 {
 */
 
 
+
+*____________wellenübergreifende Id erstellen ____________________
+gen part_id=substr(preloadcohort_id , 1,10)
+replace part_id= panel_id if part_id==""
+
+
 *____________Variablen für weitere Analysen erstellen ____________________
 do "${dodir}StuBe18W03W04_History_createVariables.do"
 
